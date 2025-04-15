@@ -7,12 +7,47 @@
   <link rel="stylesheet" href="assets/css/main.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   <style>
+    #header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 9999;
+      background-color: rgba(255, 255, 255, 0.4); /* translucent glassy */
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 1.5rem 0;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: none;
+    }
+
+    #header.shrink {
+      background-color: rgba(255, 255, 255, 0.97);
+      padding: 0.75rem 0;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #header h2 {
+      font-size: 1.8rem;
+      color: #111;
+      margin: 0;
+      transition: all 0.3s ease;
+    }
+
+    @media screen and (max-width: 600px) {
+      #header h2 {
+        font-size: 1.25rem;
+      }
+    }
+
     .modal {
       display: none;
       position: fixed;
       z-index: 10000;
-      left: 0; top: 0;
-      width: 100%; height: 100%;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
       overflow: auto;
       background-color: rgba(0, 0, 0, 0.8);
       justify-content: center;
@@ -21,7 +56,6 @@
 
     .modal-content {
       background-color: #fff;
-      margin: auto;
       padding: 2rem;
       border-radius: 8px;
       width: 90%;
@@ -73,10 +107,12 @@
       .modal-content {
         width: 90%;
       }
+
       input[type="text"], input[type="email"], textarea {
         width: 100%;
         font-size: 16px;
       }
+
       .button {
         width: 100%;
         font-size: 18px;
@@ -87,32 +123,20 @@
 </head>
 <body class="is-preload">
 
+<!-- Sticky Welcome Header -->
+<header id="header">
+  <h2>Welcome to MoveWell Fitness</h2>
+</header>
+
 <!-- Floating CTA -->
 <a href="#" id="floatingCta">🎁 Free Session</a>
 
 <!-- Wrapper -->
 <div id="wrapper" class="fade-in">
 
-  <!-- Header with Logo -->
-  <header id="header">
-    <a href="index.html" class="logo">
-      <img src="images/Logo.png" alt="MoveWell Fitness Logo" style="height: 48px; width: auto;" />
-    </a>
-  </header>
-
-  <!-- Navigation -->
-  <nav id="nav">
-    <ul class="links">
-      <li class="active"><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero Section -->
-  <div id="intro">
-    <img src="images/Logo.png" alt="MoveWell Fitness Logo" style="height: 80px; margin-bottom: 1rem;" />
+  <!-- Hero Section with Logo -->
+  <div id="intro" style="text-align: center; padding-top: 140px;">
+    <img src="images/Logo.png" alt="MoveWell Fitness Logo" style="height: 120px; max-width: 100%; margin-bottom: 1.5rem;" />
     <h1>Start Your Fitness Journey<br />With a Complimentary Session</h1>
     <p>Experience mobile personal training or online coaching — no commitment, just results.</p>
     <ul class="actions">
@@ -164,9 +188,8 @@
     </section>
   </footer>
 
-  <!-- Copyright -->
   <div id="copyright">
-    <ul><li>&copy; MoveWell Fitness</li><li>Design: Custom by Caelan & GPT 🔨</li></ul>
+    <ul><li>&copy; MoveWell Fitness</li><li>Design by Caelan & GPT 🔥</li></ul>
   </div>
 </div>
 
@@ -207,6 +230,17 @@
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 <script>
+  // Shrinking header on scroll
+  window.addEventListener("scroll", function () {
+    const header = document.getElementById("header");
+    if (window.scrollY > 40) {
+      header.classList.add("shrink");
+    } else {
+      header.classList.remove("shrink");
+    }
+  });
+
+  // Modal logic
   document.addEventListener("DOMContentLoaded", function () {
     const popup = document.getElementById("getStartedPopup");
     const closeBtn = document.querySelector("#getStartedPopup .close");
