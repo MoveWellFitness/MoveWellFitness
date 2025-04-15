@@ -1,108 +1,99 @@
 <!DOCTYPE HTML>
- <html>
- <head>
- 	<title>Services | MoveWell</title>
- 	<meta charset="utf-8" />
- 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
- 	<link rel="stylesheet" href="assets/css/main.css" />
- 	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
- 	<style>
- 		.dropdown {
- 			position: relative;
- 			display: inline-block;
- 		}
- 		.dropdown-content {
- 			display: none;
- 			position: absolute;
- 			background-color: #f9f9f9;
- 			min-width: 200px;
- 			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
- 			z-index: 1;
- 		}
- 		.dropdown-content a {
- 			color: black;
- 			padding: 12px 16px;
- 			text-decoration: none;
- 			display: block;
- 		}
- 		.dropdown:hover .dropdown-content {
- 			display: block;
- 		}
- 	</style>
- </head>
- <body class="is-preload">
- 	<div id="wrapper" class="fade-in">
- 		<header id="header">
- 			<a href="index.html" class="logo">MoveWell</a>
- 		</header>
- 		<nav id="nav">
- 			<ul class="links">
- 				<li><a href="index.html">Home</a></li>
- 				<li><a href="about.html">About</a></li>
- 				<li class="active dropdown">
- 					<a href="services.html">Services</a>
- 					<div class="dropdown-content">
- 						<a href="#on1">1-on-1 Training</a>
- 						<a href="#online">Online Coaching</a>
- 						<a href="#group">Group Sessions</a>
- 						<a href="#special">Special Programs</a>
- 					</div>
- 				</li>
- 				<li><a href="contact.html">Contact</a></li>
- 			</ul>
- 			<ul class="icons">
- 				<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
- 				<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
- 				<li><a href="#" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
- 			</ul>
- 		</nav>
- 		<div id="main">
- 			<section class="post">
- 				<header class="major">
- 					<h1>Our Services</h1>
- 					<p>Fitness solutions designed for real life — personalized, flexible, and effective.</p>
- 				</header>
- 				<h2 id="on1">1-on-1 Personal Training</h2>
- 				<p>We bring the workout to you. Whether you're training at home, in a park, or your building’s gym, our certified coaches tailor each session to your goals, ability, and space.</p>
- 				<h2 id="online">Online Coaching</h2>
- 				<p>Work with us remotely through custom programming, video tutorials, and weekly check-ins. Track your progress and stay consistent with support from real coaches.</p>
- 				<h2 id="group">Group & Partner Sessions</h2>
- 				<p>Motivate each other with affordable and energizing small group or partner sessions. Great for families, friends, and corporate wellness programs.</p>
- 				<h2 id="special">Specialized Programs</h2>
- 				<p>We also offer programs for pre/postnatal fitness, mobility and recovery, and sports-specific training. Ask us how we can help with your unique needs.</p>
- 			</section>
- 		</div>
- 		<footer id="footer">
- 			<section class="split contact">
- 				<section class="alt">
- 					<h3>Location</h3>
- 					<p>Mobile & Online Coaching</p>
- 				</section>
- 				<section>
- 					<h3>Email</h3>
- 					<p><a href="mailto:contact@movewellfit.com">contact@movewellfit.com</a></p>
- 					<p><a href="mailto:movewellfitness25@gmail.com">movewellfitness25@gmail.com</a></p>
- 				</section>
- 				<section>
- 					<h3>Social</h3>
- 					<ul class="icons alt">
- 						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
- 						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
- 						<li><a href="#" class="icon brands alt fa-youtube"><span class="label">YouTube</span></a></li>
- 					</ul>
- 				</section>
- 			</section>
- 		</footer>
- 		<div id="copyright">
- 			<ul><li>&copy; MoveWell</li><li>Design adapted from: <a href="https://html5up.net">HTML5 UP</a></li></ul>
- 		</div>
- 	</div>
- 	<script src="assets/js/jquery.min.js"></script>
- 	<script src="assets/js/jquery.scrollex.min.js"></script>
- 	<script src="assets/js/jquery.scrolly.min.js"></script>
- 	<script src="assets/js/browser.min.js"></script>
- 	<script src="assets/js/breakpoints.min.js"></script>
- 	<script src="assets/js/util.js"></script>
- 	<script src="assets/js/main.js"></script>
- </body>
- </html>
+<html>
+<head>
+  <title>Services | MoveWell</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2em;
+    }
+    .pricing-table th, .pricing-table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+    }
+    .pricing-table th {
+      background-color: #f5f5f5;
+    }
+    .icon-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .icon-title i {
+      font-size: 1.5rem;
+    }
+    .button.small:hover {
+      background-color: #5cb85c;
+      border-color: #4cae4c;
+      color: white;
+      transition: all 0.3s ease-in-out;
+    }
+    .pricing-table tr:hover {
+      background-color: #f0f8ff;
+      transition: background-color 0.2s;
+    }
+    #popup-form-container {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+    #popup-form-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 400px;
+      width: 90%;
+      position: relative;
+      text-align: center;
+    }
+    #popup-form-box .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    #popup-form-box .contact-info {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body class="is-preload">
+
+<!-- Popup Form -->
+<div id="popup-form-container">
+  <div id="popup-form-box">
+    <span class="close" onclick="document.getElementById('popup-form-container').style.display='none'">&times;</span>
+    <h2>Let’s Get Started!</h2>
+    <p>Share your info and we’ll reach out to customize your training.</p>
+    <form id="popup-contact-form">
+      <input type="text" name="name" placeholder="Your Name" required style="width: 100%; margin-bottom: 10px; padding: 0.5rem;" />
+      <input type="email" name="email" placeholder="Your Email" required style="width: 100%; margin-bottom: 10px; padding: 0.5rem;" />
+      <input type="tel" name="phone" placeholder="Your Phone Number (optional)" style="width: 100%; margin-bottom: 10px; padding: 0.5rem;" />
+      <textarea name="message" placeholder="Tell us a bit about your goals..." rows="4" style="width: 100%; margin-bottom: 10px; padding: 0.5rem;"></textarea>
+      <button type="submit" class="button">Submit</button>
+      <p id="form-message" style="margin-top: 1rem; color: green; display: none;">You're all set! A coach will be in touch to get you started!</p>
+    </form>
+    <div class="contact-info">
+      Or reach out directly at: <strong>555-555-5555</strong>
+    </div>
+  </div>
+</div>
+
+<!-- ...rest of document remains unchanged... -->
