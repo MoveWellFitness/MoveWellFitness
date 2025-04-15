@@ -1,108 +1,193 @@
 <!DOCTYPE HTML>
- <html>
- <head>
- 	<title>Services | MoveWell</title>
- 	<meta charset="utf-8" />
- 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
- 	<link rel="stylesheet" href="assets/css/main.css" />
- 	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
- 	<style>
- 		.dropdown {
- 			position: relative;
- 			display: inline-block;
- 		}
- 		.dropdown-content {
- 			display: none;
- 			position: absolute;
- 			background-color: #f9f9f9;
- 			min-width: 200px;
- 			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
- 			z-index: 1;
- 		}
- 		.dropdown-content a {
- 			color: black;
- 			padding: 12px 16px;
- 			text-decoration: none;
- 			display: block;
- 		}
- 		.dropdown:hover .dropdown-content {
- 			display: block;
- 		}
- 	</style>
- </head>
- <body class="is-preload">
- 	<div id="wrapper" class="fade-in">
- 		<header id="header">
- 			<a href="index.html" class="logo">MoveWell</a>
- 		</header>
- 		<nav id="nav">
- 			<ul class="links">
- 				<li><a href="index.html">Home</a></li>
- 				<li><a href="about.html">About</a></li>
- 				<li class="active dropdown">
- 					<a href="services.html">Services</a>
- 					<div class="dropdown-content">
- 						<a href="#on1">1-on-1 Training</a>
- 						<a href="#online">Online Coaching</a>
- 						<a href="#group">Group Sessions</a>
- 						<a href="#special">Special Programs</a>
- 					</div>
- 				</li>
- 				<li><a href="contact.html">Contact</a></li>
- 			</ul>
- 			<ul class="icons">
- 				<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
- 				<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
- 				<li><a href="#" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
- 			</ul>
- 		</nav>
- 		<div id="main">
- 			<section class="post">
- 				<header class="major">
- 					<h1>Our Services</h1>
- 					<p>Fitness solutions designed for real life — personalized, flexible, and effective.</p>
- 				</header>
- 				<h2 id="on1">1-on-1 Personal Training</h2>
- 				<p>We bring the workout to you. Whether you're training at home, in a park, or your building’s gym, our certified coaches tailor each session to your goals, ability, and space.</p>
- 				<h2 id="online">Online Coaching</h2>
- 				<p>Work with us remotely through custom programming, video tutorials, and weekly check-ins. Track your progress and stay consistent with support from real coaches.</p>
- 				<h2 id="group">Group & Partner Sessions</h2>
- 				<p>Motivate each other with affordable and energizing small group or partner sessions. Great for families, friends, and corporate wellness programs.</p>
- 				<h2 id="special">Specialized Programs</h2>
- 				<p>We also offer programs for pre/postnatal fitness, mobility and recovery, and sports-specific training. Ask us how we can help with your unique needs.</p>
- 			</section>
- 		</div>
- 		<footer id="footer">
- 			<section class="split contact">
- 				<section class="alt">
- 					<h3>Location</h3>
- 					<p>Mobile & Online Coaching</p>
- 				</section>
- 				<section>
- 					<h3>Email</h3>
- 					<p><a href="mailto:contact@movewellfit.com">contact@movewellfit.com</a></p>
- 					<p><a href="mailto:movewellfitness25@gmail.com">movewellfitness25@gmail.com</a></p>
- 				</section>
- 				<section>
- 					<h3>Social</h3>
- 					<ul class="icons alt">
- 						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
- 						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
- 						<li><a href="#" class="icon brands alt fa-youtube"><span class="label">YouTube</span></a></li>
- 					</ul>
- 				</section>
- 			</section>
- 		</footer>
- 		<div id="copyright">
- 			<ul><li>&copy; MoveWell</li><li>Design adapted from: <a href="https://html5up.net">HTML5 UP</a></li></ul>
- 		</div>
- 	</div>
- 	<script src="assets/js/jquery.min.js"></script>
- 	<script src="assets/js/jquery.scrollex.min.js"></script>
- 	<script src="assets/js/jquery.scrolly.min.js"></script>
- 	<script src="assets/js/browser.min.js"></script>
- 	<script src="assets/js/breakpoints.min.js"></script>
- 	<script src="assets/js/util.js"></script>
- 	<script src="assets/js/main.js"></script>
- </body>
- </html>
+<html>
+<head>
+  <title>Services | MoveWell</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+    .pricing-table {
+      margin: 2rem 0;
+      padding: 1.5rem;
+      background: #f7f7f7;
+      border-radius: 8px;
+    }
+    .pricing-table h3 {
+      margin-bottom: 1rem;
+    }
+    .pricing-table ul {
+      padding-left: 1.5rem;
+      list-style: none;
+    }
+    .pricing-table li {
+      padding: 0.3rem 0;
+    }
+    .button.primary {
+      background-color: #49bf9d;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      padding: 0.6rem 1.2rem;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+    .button.primary:hover {
+      background-color: #3aa88b;
+    }
+    form input, form textarea, form select {
+      margin-bottom: 1rem;
+    }
+    .success-message {
+      color: green;
+      display: none;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+  <!-- Header -->
+  <header id="header">
+    <a href="index.html" class="logo">MoveWell</a>
+  </header>
+
+  <!-- Nav -->
+  <nav id="nav">
+    <ul class="links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li class="active"><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <ul class="icons">
+      <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+      <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+    </ul>
+  </nav>
+
+  <!-- Main -->
+  <div id="main">
+    <section class="post">
+      <header class="major">
+        <h1>Our Services</h1>
+        <p>Fitness solutions designed for real life — personalized, flexible, and effective.</p>
+      </header>
+
+      <!-- 1-on-1 Training -->
+      <div class="pricing-table">
+        <h3><i class="fas fa-user"></i> 1-on-1 Personal Training</h3>
+        <p>We bring the workout to you—your home, park, or building gym. Certified coaches + all equipment provided.</p>
+        <ul>
+          <li>Kickstart (4 sessions): $70/session – $280 total</li>
+          <li>Progress (8 sessions): $65/session – $520 total</li>
+          <li>Build (12 sessions): $60/session – $720 total</li>
+          <li>Transform (24 sessions): $55/session – $1,320 total</li>
+        </ul>
+        <a href="#form" class="button primary">Get Started</a>
+      </div>
+
+      <!-- Partner Training -->
+      <div class="pricing-table">
+        <h3><i class="fas fa-users"></i> Partner Training (2 People)</h3>
+        <p>Train with a friend! Each session is personalized for both of you. Shared motivation. Shared results.</p>
+        <ul>
+          <li>Kickstart: $80/session – $320 total ($160/person)</li>
+          <li>Progress: $75/session – $600 total ($300/person)</li>
+          <li>Build: $70/session – $840 total ($420/person)</li>
+          <li>Transform: $65/session – $1,560 total ($780/person)</li>
+        </ul>
+        <a href="#form" class="button primary">Get Started</a>
+      </div>
+
+      <!-- Online Coaching -->
+      <div class="pricing-table">
+        <h3><i class="fas fa-laptop"></i> Online Coaching</h3>
+        <p>Remote support for real-world results. Weekly workouts, check-ins, and messaging — anytime, anywhere.</p>
+        <ul>
+          <li>$85/month</li>
+          <li>2 Custom Workouts/Week</li>
+          <li>1 Weekly Check-In</li>
+          <li>Ongoing Messaging Support</li>
+        </ul>
+        <p><strong>Special Offers:</strong><br>
+          First month: $49<br>
+          Intro 2-Pack: $100<br>
+          Referral Bonus: $50 off for both you and a friend
+        </p>
+        <a href="#form" class="button primary">Get Started</a>
+      </div>
+
+      <!-- Lead Capture Form -->
+      <div id="form" class="pricing-table">
+        <h3><i class="fas fa-envelope"></i> Get Started with MoveWell</h3>
+        <form action="https://formspree.io/f/mnnprzbw" method="POST">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="_replyto" placeholder="Your Email" required />
+          <input type="tel" name="phone" placeholder="Your Phone Number (optional)" />
+          <select name="interest">
+            <option value="">I'm interested in...</option>
+            <option value="1-on-1 Training">1-on-1 Training</option>
+            <option value="Partner Training">Partner Training</option>
+            <option value="Online Coaching">Online Coaching</option>
+          </select>
+          <textarea name="message" placeholder="Tell us more..." rows="4"></textarea>
+          <input type="text" name="_gotcha" style="display:none" />
+          <button type="submit" class="button primary">Submit</button>
+          <p id="success-message" class="success-message">You're all set! A coach will be in touch to get you started.</p>
+        </form>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <section class="split contact">
+      <section class="alt">
+        <h3>Location</h3>
+        <p>Mobile & Online Coaching</p>
+      </section>
+      <section>
+        <h3>Email</h3>
+        <p><a href="mailto:movewellfitness25@gmail.com">movewellfitness25@gmail.com</a></p>
+      </section>
+      <section>
+        <h3>Social</h3>
+        <ul class="icons alt">
+          <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+          <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+        </ul>
+      </section>
+    </section>
+  </footer>
+
+  <div id="copyright">
+    <ul><li>&copy; MoveWell</li><li>Design adapted from <a href="https://html5up.net">HTML5 UP</a></li></ul>
+  </div>
+
+</div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  document.querySelector("form").addEventListener("submit", function(e) {
+    const msg = document.getElementById("success-message");
+    setTimeout(() => {
+      msg.style.display = "block";
+    }, 500);
+  });
+</script>
+
+</body>
+</html>
