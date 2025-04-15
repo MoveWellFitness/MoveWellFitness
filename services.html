@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -16,26 +17,6 @@
     .scrolly-section.visible {
       opacity: 1;
       transform: none;
-    }
-    .special-offers {
-      background: #ffeaa7;
-      padding: 1.5rem;
-      border-left: 5px solid #f39c12;
-      margin-bottom: 2rem;
-      border-radius: 5px;
-    }
-    .service-table {
-      width: 100%;
-      margin-bottom: 2rem;
-      border-collapse: collapse;
-    }
-    .service-table th, .service-table td {
-      border: 1px solid #ddd;
-      padding: 12px;
-      text-align: center;
-    }
-    .service-table th {
-      background-color: #f0f0f0;
     }
     .button.primary.centered {
       display: inline-flex;
@@ -57,30 +38,26 @@
     .button.primary.centered:hover {
       background-color: #0056b3;
     }
-
     #popup-form-container {
       display: none;
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       background: rgba(0, 0, 0, 0.7);
       justify-content: center;
       align-items: center;
       z-index: 9999;
+      padding: 1rem;
     }
-
     #popup-form-box {
       background: white;
-      padding: 2rem;
+      padding: 1.5rem;
       border-radius: 10px;
-      max-width: 400px;
-      width: 90%;
-      position: relative;
+      width: 100%;
+      max-width: 380px;
       text-align: center;
+      position: relative;
     }
-
     #popup-form-box .close {
       position: absolute;
       top: 10px;
@@ -91,7 +68,7 @@
     }
   </style>
 </head>
-<body class="is-preload">
+<body>
 
 <!-- Wrapper -->
 <div id="wrapper">
@@ -110,18 +87,12 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <ul class="icons">
-      <li style="margin-right: 1rem; font-size: 0.9rem; color: #bbb;">
-        <i class="fas fa-phone-alt"></i> (555) 555-5555
-      </li>
-      <li style="margin-right: 1rem; font-size: 0.9rem;">
-        <a href="mailto:movewellfitness25@gmail.com" style="color: #bbb;">
-          <i class="fas fa-envelope"></i> movewellfitness25@gmail.com
-        </a>
-      </li>
+      <li><i class="fas fa-phone-alt"></i> (555) 555-5555</li>
+      <li><a href="mailto:movewellfitness25@gmail.com"><i class="fas fa-envelope"></i> movewellfitness25@gmail.com</a></li>
     </ul>
   </nav>
 
-  <!-- Main -->
+  <!-- Main Content -->
   <div id="main">
     <section class="post">
       <header class="major scrolly-section">
@@ -129,51 +100,22 @@
         <p>Real coaching. Real people. Real progress. On your terms.</p>
       </header>
 
-      <div class="special-offers scrolly-section">
-        <h2><i class="fas fa-gift"></i> Special Offers</h2>
-        <ul>
-          <li><strong>🎉 First Month Online Coaching: $49</strong></li>
-          <li><strong>💪 Try 2 Personal Training Sessions: $100 intro pack</strong></li>
-          <li><strong>🤝 Referral Bonus: Bring a friend and you each get $50 off</strong></li>
-        </ul>
-      </div>
-
+      <!-- Example Service Section -->
       <div class="scrolly-section">
         <h2><i class="fas fa-user"></i> 1-on-1 Personal Training</h2>
-        <table class="service-table">
-          <thead><tr><th>Package</th><th>Sessions</th><th>Rate</th><th>Total</th></tr></thead>
-          <tbody>
-            <tr><td>Kickstart</td><td>4</td><td>$70</td><td>$280</td></tr>
-            <tr><td>Progress</td><td>8</td><td>$65</td><td>$520</td></tr>
-            <tr><td>Build</td><td>12</td><td>$60</td><td>$720</td></tr>
-            <tr><td>Transform</td><td>24</td><td>$55</td><td>$1,320</td></tr>
-          </tbody>
-        </table>
+        <p>Customized training to fit your goals and schedule.</p>
         <a class="button primary centered" data-service="1-on-1 Personal Training">Get Started</a>
       </div>
 
       <div class="scrolly-section">
-        <h2><i class="fas fa-users"></i> Partner Training (2 People)</h2>
-        <table class="service-table">
-          <thead><tr><th>Package</th><th>Sessions</th><th>Rate</th><th>Total</th><th>Per Person</th></tr></thead>
-          <tbody>
-            <tr><td>Kickstart</td><td>4</td><td>$80</td><td>$320</td><td>$160</td></tr>
-            <tr><td>Progress</td><td>8</td><td>$75</td><td>$600</td><td>$300</td></tr>
-            <tr><td>Build</td><td>12</td><td>$70</td><td>$840</td><td>$420</td></tr>
-            <tr><td>Transform</td><td>24</td><td>$65</td><td>$1,560</td><td>$780</td></tr>
-          </tbody>
-        </table>
+        <h2><i class="fas fa-users"></i> Partner Training</h2>
+        <p>Train together with a partner for extra motivation and fun.</p>
         <a class="button primary centered" data-service="Partner Training">Get Started</a>
       </div>
 
       <div class="scrolly-section">
         <h2><i class="fas fa-laptop"></i> Online Coaching</h2>
-        <table class="service-table">
-          <thead><tr><th>Plan</th><th>Price</th><th>Includes</th></tr></thead>
-          <tbody>
-            <tr><td>Standard</td><td>$85/mo</td><td>2 Custom Workouts/Week, Weekly Check-In, Messaging Support</td></tr>
-          </tbody>
-        </table>
+        <p>Flexible, remote coaching to keep you on track from anywhere.</p>
         <a class="button primary centered" data-service="Online Coaching">Get Started</a>
       </div>
     </section>
@@ -182,27 +124,12 @@
   <!-- Footer -->
   <footer id="footer" class="scrolly-section">
     <section class="split contact">
-      <section class="alt">
-        <h3>Location</h3>
-        <p>Mobile & Online Coaching</p>
-      </section>
       <section>
         <h3>Email</h3>
         <p><a href="mailto:movewellfitness25@gmail.com">movewellfitness25@gmail.com</a></p>
       </section>
-      <section>
-        <h3>Social</h3>
-        <ul class="icons alt">
-          <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-          <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-        </ul>
-      </section>
     </section>
   </footer>
-
-  <div id="copyright">
-    <ul><li>&copy; MoveWell</li><li>Design adapted from: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-  </div>
 </div>
 
 <!-- Popup Form -->
@@ -211,22 +138,11 @@
     <span class="close">&times;</span>
     <h2>Get Started</h2>
     <p style="margin-top: 0.5rem; font-weight: bold;" id="selected-service-label"></p>
-
     <form id="popup-form" method="POST" action="https://formspree.io/f/xblgbzrd">
       <input type="hidden" id="popup-service" name="Service" />
-
-      <div>
-        <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 10px;" />
-      </div>
-
-      <div>
-        <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 10px;" />
-      </div>
-
-      <div>
-        <input type="tel" name="phone" placeholder="Your Phone Number" style="width: 100%; padding: 10px;" />
-      </div>
-
+      <div><input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 10px;" /></div>
+      <div><input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 10px;" /></div>
+      <div><input type="tel" name="phone" placeholder="Your Phone Number" style="width: 100%; padding: 10px;" /></div>
       <div style="text-align: left; margin-top: 1rem;">
         <label for="Goals">Primary Goal</label>
         <select name="goal" id="Goals" style="width: 100%; padding: 10px;">
@@ -238,19 +154,15 @@
           <option>General health</option>
         </select>
       </div>
-
       <div style="text-align: left; margin-top: 1rem;">
         <label for="StartDate">Preferred Start Date</label>
         <input type="date" name="start_date" id="StartDate" style="width: 100%; padding: 10px;" />
       </div>
-
       <div style="margin-top: 1rem;">
         <textarea name="message" placeholder="Any other goals or questions?" rows="4" style="width: 100%; padding: 10px;"></textarea>
       </div>
-
       <button type="submit" class="button primary centered" style="margin-top: 1.5rem;">Submit</button>
     </form>
-
     <div id="confirmation-screen" style="display: none; text-align: center; padding-top: 1rem;">
       <h2>🎉 You're All Set!</h2>
       <p>Thanks for getting started. We'll reach out to you shortly.</p>
@@ -258,41 +170,19 @@
   </div>
 </div>
 
-<!-- CSS (keep or merge with your style tag) -->
-<style>
-#popup-form-container {
-  display: none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  padding: 1rem;
-}
-#popup-form-box {
-  background: white;
-  padding: 1.5rem;
-  border-radius: 10px;
-  width: 100%;
-  max-width: 380px;
-  text-align: center;
-  position: relative;
-}
-#popup-form-box .close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 20px;
-  cursor: pointer;
-  font-weight: bold;
-}
-</style>
-
-<!-- JavaScript -->
+<!-- Script -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll('.scrolly-section');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+  sections.forEach(section => observer.observe(section));
+
   const popupContainer = document.getElementById('popup-form-container');
   const popupForm = document.getElementById('popup-form');
   const confirmation = document.getElementById('confirmation-screen');
@@ -320,7 +210,6 @@ document.addEventListener("DOMContentLoaded", function () {
   popupForm.addEventListener('submit', function (e) {
     e.preventDefault();
     const formData = new FormData(popupForm);
-
     fetch(popupForm.action, {
       method: 'POST',
       body: formData,
@@ -347,6 +236,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-
 </body>
 </html>
+
