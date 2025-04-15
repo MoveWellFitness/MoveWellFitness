@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <!--
-	MoveWell Website using Massively Theme
+	MoveWell Website using Massively Theme (Integrated Sections)
 -->
 <html>
 <head>
@@ -45,9 +45,9 @@
 	<nav id="nav">
 		<ul class="links">
 			<li class="active"><a href="index.html">Home</a></li>
-			<li><a href="about.html">About</a></li>
-			<li><a href="services.html">Services</a></li>
-			<li><a href="contact.html">Contact</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#services">Services</a></li>
+			<li><a href="#contact">Contact</a></li>
 		</ul>
 		<ul class="icons">
 			<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
@@ -59,7 +59,7 @@
 	<!-- Main -->
 	<div id="main">
 
-		<!-- Featured Post -->
+		<!-- Featured -->
 		<article class="post featured">
 			<header class="major">
 				<span class="date">April 2025</span>
@@ -70,41 +70,63 @@
 			</header>
 			<a href="#" class="image main"><img src="images/movewell-feature.jpg" alt="MoveWell Training" /></a>
 			<ul class="actions special">
-				<li><a href="#" class="button large">Start Your Journey</a></li>
+				<li><a href="#contact" class="button large">Start Your Journey</a></li>
 			</ul>
 		</article>
 
-		<!-- About / Services -->
-		<section class="posts">
-			<article>
-				<header><span class="date">About Us</span>
-				<h2><a href="about.html">What is MoveWell?</a></h2></header>
-				<a href="about.html" class="image fit"><img src="images/about.jpg" alt="About MoveWell" /></a>
-				<p>We help busy people stay fit with mobile personal training and online programs built to adapt to your schedule.</p>
-				<ul class="actions special">
-					<li><a href="about.html" class="button">Learn More</a></li>
-				</ul>
-			</article>
-			<article>
-				<header><span class="date">Services</span>
-				<h2><a href="services.html">What We Offer</a></h2></header>
-				<a href="services.html" class="image fit"><img src="images/services.jpg" alt="MoveWell Services" /></a>
-				<p>From one-on-one coaching to online programs and group training — we have something for every fitness journey.</p>
-				<ul class="actions special">
-					<li><a href="services.html" class="button">Explore Services</a></li>
-				</ul>
-			</article>
-			<article>
-				<header><span class="date">Contact</span>
-				<h2><a href="contact.html">Let’s Connect</a></h2></header>
-				<a href="contact.html" class="image fit"><img src="images/contact.jpg" alt="Contact MoveWell" /></a>
-				<p>Reach out for questions, feedback, or to schedule your free consultation. We're excited to hear from you!</p>
-				<ul class="actions special">
-					<li><a href="contact.html" class="button">Get in Touch</a></li>
-				</ul>
-			</article>
+		<!-- About Section -->
+		<section class="post" id="about">
+			<header class="major">
+				<h1>About MoveWell</h1>
+				<p>Our mission is to help you move better, feel stronger, and live healthier with personalized fitness coaching — wherever you are.</p>
+			</header>
+			<p>MoveWell was founded to bring expert personal training to busy people who want flexible, accessible, and effective fitness programs. Whether you're training in your living room, local park, or through video calls — we meet you where you are.
+			We focus on realistic goals, sustainable habits, and empowering people of all fitness levels.</p>
+			<p>Led by certified trainers with a passion for coaching and movement, we believe fitness should be inclusive, enjoyable, and tailored to your lifestyle.</p>
 		</section>
 
+		<!-- Services Section -->
+		<section class="post" id="services">
+			<header class="major">
+				<h1>Our Services</h1>
+				<p>Fitness solutions designed for real life — personalized, flexible, and effective.</p>
+			</header>
+			<h2>1-on-1 Personal Training</h2>
+			<p>We bring the workout to you. Whether you're training at home, in a park, or your building’s gym, our certified coaches tailor each session to your goals, ability, and space.</p>
+			<h2>Online Coaching</h2>
+			<p>Work with us remotely through custom programming, video tutorials, and weekly check-ins. Track your progress and stay consistent with support from real coaches.</p>
+			<h2>Group & Partner Sessions</h2>
+			<p>Motivate each other with affordable and energizing small group or partner sessions. Great for families, friends, and corporate wellness programs.</p>
+			<h2>Specialized Programs</h2>
+			<p>We also offer programs for pre/postnatal fitness, mobility and recovery, and sports-specific training. Ask us how we can help with your unique needs.</p>
+		</section>
+
+		<!-- Contact Section -->
+		<section class="post" id="contact">
+			<header class="major">
+				<h1>Contact Us</h1>
+				<p>Have questions or ready to start? Let’s talk about your fitness goals.</p>
+			</header>
+			<form method="post" action="#">
+				<div class="fields">
+					<div class="field">
+						<label for="name">Name</label>
+						<input type="text" name="name" id="name" />
+					</div>
+					<div class="field">
+						<label for="email">Email</label>
+						<input type="email" name="email" id="email" />
+					</div>
+					<div class="field">
+						<label for="message">Message</label>
+						<textarea name="message" id="message" rows="5"></textarea>
+					</div>
+				</div>
+				<ul class="actions">
+					<li><input type="submit" value="Send Message" class="primary" /></li>
+				</ul>
+			</form>
+		</section>
 	</div>
 
 	<!-- Footer -->
@@ -133,7 +155,6 @@
 	<div id="copyright">
 		<ul><li>&copy; MoveWell</li><li>Design adapted from: <a href="https://html5up.net">HTML5 UP</a></li></ul>
 	</div>
-
 </div>
 
 <!-- Scripts -->
@@ -145,7 +166,6 @@
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 <script>
-	// Show popup after delay
 	setTimeout(() => {
 		document.getElementById('popup').style.display = 'flex';
 	}, 3000);
