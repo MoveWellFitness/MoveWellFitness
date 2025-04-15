@@ -1,4 +1,3 @@
-
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -16,20 +15,6 @@
       font-size: 20px;
       cursor: pointer;
       font-weight: bold;
-    }
-    .contact-topbar {
-      text-align: right;
-      padding: 0.5rem 1rem;
-      font-size: 0.9rem;
-      color: #999;
-    }
-    .contact-topbar a {
-      color: #999;
-      text-decoration: none;
-      margin-left: 1rem;
-    }
-    .contact-topbar a:hover {
-      color: #fff;
     }
     .scrolly-section {
       opacity: 0;
@@ -62,12 +47,6 @@
 <!-- Wrapper -->
 <div id="wrapper" class="fade-in">
 
-  <!-- Contact Topbar -->
-  <div class="contact-topbar">
-    <span><i class="fas fa-phone-alt"></i> (555) 555-5555</span>
-    <a href="mailto:movewellfitness25@gmail.com"><i class="fas fa-envelope"></i> movewellfitness25@gmail.com</a>
-  </div>
-
   <!-- Mobile Nav Toggle -->
   <a href="#navPanel" class="navPanelToggle"></a>
 
@@ -94,6 +73,14 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <ul class="icons">
+      <li style="margin-right: 1rem; font-size: 0.9rem; color: #bbb;">
+        <i class="fas fa-phone-alt"></i> (555) 555-5555
+      </li>
+      <li style="margin-right: 1rem; font-size: 0.9rem;">
+        <a href="mailto:movewellfitness25@gmail.com" style="color: #bbb;">
+          <i class="fas fa-envelope"></i> movewellfitness25@gmail.com
+        </a>
+      </li>
       <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
       <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
     </ul>
@@ -207,5 +194,6 @@
     sections.forEach(section => observer.observe(section));
   });
 </script>
+
 </body>
 </html>
