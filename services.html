@@ -210,24 +210,26 @@
   <div id="popup-form-box">
     <span class="close">&times;</span>
     <h2>Get Started</h2>
+    <p style="margin-top: 0.5rem; font-weight: bold;" id="selected-service-label"></p>
+
     <form id="popup-form" method="POST" action="https://formspree.io/f/xblgbzrd">
       <input type="hidden" id="popup-service" name="Service" />
-      
+
       <div>
-        <input type="text" name="Name" placeholder="Your Name" required />
+        <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 10px;" />
       </div>
 
       <div>
-        <input type="email" name="Email" placeholder="Your Email" required />
+        <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 10px;" />
       </div>
 
       <div>
-        <input type="tel" name="Phone" placeholder="Your Phone Number" />
+        <input type="tel" name="phone" placeholder="Your Phone Number" style="width: 100%; padding: 10px;" />
       </div>
 
-      <div>
-        <label for="Goals" style="display:block; margin-top:10px;">Primary Goal</label>
-        <select name="Fitness Goal" id="Goals">
+      <div style="text-align: left; margin-top: 1rem;">
+        <label for="Goals">Primary Goal</label>
+        <select name="goal" id="Goals" style="width: 100%; padding: 10px;">
           <option value="">-- Select a goal --</option>
           <option>Lose weight</option>
           <option>Build muscle</option>
@@ -237,19 +239,18 @@
         </select>
       </div>
 
-      <div>
-        <label for="StartDate" style="display:block; margin-top:10px;">Preferred Start Date</label>
-        <input type="date" name="Start Date" id="StartDate" />
+      <div style="text-align: left; margin-top: 1rem;">
+        <label for="StartDate">Preferred Start Date</label>
+        <input type="date" name="start_date" id="StartDate" style="width: 100%; padding: 10px;" />
       </div>
 
-      <div>
-        <textarea name="Message" placeholder="Any other goals or questions?" rows="4" style="margin-top:10px;"></textarea>
+      <div style="margin-top: 1rem;">
+        <textarea name="message" placeholder="Any other goals or questions?" rows="4" style="width: 100%; padding: 10px;"></textarea>
       </div>
 
-      <button type="submit" class="button primary centered" style="margin-top: 1rem;">Submit</button>
+      <button type="submit" class="button primary centered" style="margin-top: 1.5rem;">Submit</button>
     </form>
 
-    <!-- Confirmation screen -->
     <div id="confirmation-screen" style="display: none; text-align: center; padding-top: 1rem;">
       <h2>🎉 You're All Set!</h2>
       <p>Thanks for getting started. We'll reach out to you shortly.</p>
@@ -257,101 +258,93 @@
   </div>
 </div>
 
-<!-- Inline Styles for Popup Layout -->
+<!-- CSS (keep or merge with your style tag) -->
 <style>
-  #popup-form-container {
-    display: none;
-    position: fixed;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    padding: 1rem;
-  }
-
-  #popup-form-box {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 380px;
-    text-align: center;
-    position: relative;
-  }
-
-  #popup-form-box .close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 20px;
-    cursor: pointer;
-    font-weight: bold;
-  }
+#popup-form-container {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 1rem;
+}
+#popup-form-box {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  position: relative;
+}
+#popup-form-box .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
 </style>
 
-<!-- Popup + Scroll Script -->
+<!-- JavaScript -->
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    // Scroll reveal animation
-    const sections = document.querySelectorAll('.scrolly-section');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-    sections.forEach(section => observer.observe(section));
+document.addEventListener("DOMContentLoaded", function () {
+  const popupContainer = document.getElementById('popup-form-container');
+  const popupForm = document.getElementById('popup-form');
+  const confirmation = document.getElementById('confirmation-screen');
+  const serviceField = document.getElementById('popup-service');
+  const serviceLabel = document.getElementById('selected-service-label');
+  const closeBtn = document.querySelector('#popup-form-box .close');
 
-    // Popup form logic
-    const popupContainer = document.getElementById('popup-form-container');
-    const popupForm = document.getElementById('popup-form');
-    const confirmation = document.getElementById('confirmation-screen');
-    const serviceField = document.getElementById('popup-service');
-    const closeBtn = document.querySelector('#popup-form-box .close');
-
-    document.querySelectorAll('.button[data-service]').forEach(button => {
-      button.addEventListener('click', function (e) {
-        e.preventDefault();
-        serviceField.value = this.getAttribute('data-service');
-        popupContainer.style.display = 'flex';
-      });
-    });
-
-    closeBtn.addEventListener('click', function () {
-      popupContainer.style.display = 'none';
-      popupForm.style.display = 'block';
-      confirmation.style.display = 'none';
-      popupForm.reset();
-    });
-
-    popupForm.addEventListener('submit', function (e) {
+  document.querySelectorAll('.button[data-service]').forEach(button => {
+    button.addEventListener('click', function (e) {
       e.preventDefault();
-      const formData = new FormData(popupForm);
-      fetch(popupForm.action, {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      }).then(response => {
-        if (response.ok) {
-          popupForm.style.display = 'none';
-          confirmation.style.display = 'block';
-          popupForm.reset();
-          setTimeout(() => {
-            popupContainer.style.display = 'none';
-            confirmation.style.display = 'none';
-            popupForm.style.display = 'block';
-          }, 4000);
-        } else {
-          alert("There was a problem. Please try again.");
-        }
-      }).catch(() => {
-        alert("Oops! Submission failed.");
-      });
+      const selected = this.getAttribute('data-service');
+      serviceField.value = selected;
+      serviceLabel.textContent = selected;
+      popupContainer.style.display = 'flex';
     });
   });
+
+  closeBtn.addEventListener('click', function () {
+    popupContainer.style.display = 'none';
+    popupForm.style.display = 'block';
+    confirmation.style.display = 'none';
+    popupForm.reset();
+  });
+
+  popupForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const formData = new FormData(popupForm);
+
+    fetch(popupForm.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+      if (response.ok) {
+        popupForm.style.display = 'none';
+        confirmation.style.display = 'block';
+        popupForm.reset();
+        setTimeout(() => {
+          popupContainer.style.display = 'none';
+          confirmation.style.display = 'none';
+          popupForm.style.display = 'block';
+        }, 4000);
+      } else {
+        alert("There was a problem submitting the form.");
+      }
+    })
+    .catch(() => {
+      alert("Oops! Something went wrong with submission.");
+    });
+  });
+});
 </script>
 
 
