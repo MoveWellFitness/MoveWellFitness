@@ -1,107 +1,167 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>Services | MoveWell</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	<style>
-		.dropdown {
-			position: relative;
-			display: inline-block;
-		}
-		.dropdown-content {
-			display: none;
-			position: absolute;
-			background-color: #f9f9f9;
-			min-width: 200px;
-			box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-			z-index: 1;
-		}
-		.dropdown-content a {
-			color: black;
-			padding: 12px 16px;
-			text-decoration: none;
-			display: block;
-		}
-		.dropdown:hover .dropdown-content {
-			display: block;
-		}
-	</style>
+  <title>Services | MoveWell</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2em;
+    }
+    .pricing-table th, .pricing-table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+    }
+    .pricing-table th {
+      background-color: #f5f5f5;
+    }
+    .icon-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .icon-title i {
+      font-size: 1.5rem;
+    }
+    .button.small:hover {
+      background-color: #5cb85c;
+      border-color: #4cae4c;
+      color: white;
+      transition: all 0.3s ease-in-out;
+    }
+    .pricing-table tr:hover {
+      background-color: #f0f8ff;
+      transition: background-color 0.2s;
+    }
+  </style>
 </head>
 <body class="is-preload">
-	<div id="wrapper" class="fade-in">
-		<header id="header">
-			<a href="index.html" class="logo">MoveWell</a>
-		</header>
-		<nav id="nav">
-			<ul class="links">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="about.html">About</a></li>
-				<li class="active dropdown">
-					<a href="services.html">Services</a>
-					<div class="dropdown-content">
-						<a href="#on1">1-on-1 Training</a>
-						<a href="#online">Online Coaching</a>
-						<a href="#group">Group Sessions</a>
-						<a href="#special">Special Programs</a>
-					</div>
-				</li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-			<ul class="icons">
-				<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-				<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-				<li><a href="#" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
-			</ul>
-		</nav>
-		<div id="main">
-			<section class="post">
-				<header class="major">
-					<h1>Our Services</h1>
-					<p>Fitness solutions designed for real life — personalized, flexible, and effective.</p>
-				</header>
-				<h2 id="on1">1-on-1 Personal Training</h2>
-				<p>We bring the workout to you. Whether you're training at home, in a park, or your building’s gym, our certified coaches tailor each session to your goals, ability, and space.</p>
-				<h2 id="online">Online Coaching</h2>
-				<p>Work with us remotely through custom programming, video tutorials, and weekly check-ins. Track your progress and stay consistent with support from real coaches.</p>
-				<h2 id="group">Group & Partner Sessions</h2>
-				<p>Motivate each other with affordable and energizing small group or partner sessions. Great for families, friends, and corporate wellness programs.</p>
-				<h2 id="special">Specialized Programs</h2>
-				<p>We also offer programs for pre/postnatal fitness, mobility and recovery, and sports-specific training. Ask us how we can help with your unique needs.</p>
-			</section>
-		</div>
-		<footer id="footer">
-			<section class="split contact">
-				<section class="alt">
-					<h3>Location</h3>
-					<p>Mobile & Online Coaching</p>
-				</section>
-				<section>
-					<h3>Email</h3>
-					<p><a href="mailto:movewellfitness25@gmail.com">movewellfitness25@gmail.com</a></p>
-				</section>
-				<section>
-					<h3>Social</h3>
-					<ul class="icons alt">
-						<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="#" class="icon brands alt fa-youtube"><span class="label">YouTube</span></a></li>
-					</ul>
-				</section>
-			</section>
-		</footer>
-		<div id="copyright">
-			<ul><li>&copy; MoveWell</li><li>Design adapted from: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-		</div>
-	</div>
-	<script src="assets/js/jquery.min.js"></script>
-	<script src="assets/js/jquery.scrollex.min.js"></script>
-	<script src="assets/js/jquery.scrolly.min.js"></script>
-	<script src="assets/js/browser.min.js"></script>
-	<script src="assets/js/breakpoints.min.js"></script>
-	<script src="assets/js/util.js"></script>
-	<script src="assets/js/main.js"></script>
+  <div id="wrapper" class="fade-in">
+
+    <!-- Header -->
+    <header id="header">
+      <a href="index.html" class="logo">MoveWell</a>
+    </header>
+
+    <!-- Navigation -->
+    <nav id="nav">
+      <ul class="links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="active"><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <ul class="icons">
+        <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+        <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+        <li><a href="#" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+      </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+      <section class="post">
+        <header class="major">
+          <h1>Training Services & Pricing</h1>
+          <p>Choose the training format that fits your goals and lifestyle.</p>
+        </header>
+
+        <h2 class="icon-title"><i class="fas fa-dumbbell"></i> Mobile Personal Training</h2>
+        <p>We bring personalized fitness directly to your home, backyard, garage, or local park. Every session is tailored to your goals using a variety of portable equipment. Includes expert coaching, real-time feedback, and full accountability.</p>
+
+        <h3>1-on-1 Packages</h3>
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th><i class="fas fa-flag-checkered"></i> Package</th><th>Sessions</th><th>Rate</th><th>Total</th><th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Kickstart</td><td>4</td><td>$70</td><td>$280</td><td><a href="contact.html" class="button small">Get Started</a></td></tr>
+            <tr><td>Progress</td><td>8</td><td>$65</td><td>$520</td><td><a href="contact.html" class="button small">Get Started</a></td></tr>
+            <tr><td>Build</td><td>12</td><td>$60</td><td>$720</td><td><a href="contact.html" class="button small">Get Started</a></td></tr>
+            <tr><td>Transform</td><td>24</td><td>$55</td><td>$1,320</td><td><a href="contact.html" class="button small">Get Started</a></td></tr>
+          </tbody>
+        </table>
+
+        <h3>Partner Packages (2 People)</h3>
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th><i class="fas fa-user-friends"></i> Package</th><th>Sessions</th><th>Rate</th><th>Per Person</th><th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Kickstart</td><td>4</td><td>$80</td><td>$160</td><td><a href="contact.html" class="button small">Get Started</a></td></tr>
+            <tr><td>Progress</td><td>8</td><td>$75</td><td>$300</td><td><a href="contact.html" class="button small">Get Started</a></td></tr>
+            <tr><td>Build</td><td>12</td><td>$70</td><td>$420</td><td><a href="contact.html" class="button small">Get Started</a></td></tr>
+            <tr><td>Transform</td><td>24</td><td>$65</td><td>$780</td><td><a href="contact.html" class="button small">Get Started</a></td></tr>
+          </tbody>
+        </table>
+
+        <h2 class="icon-title"><i class="fas fa-laptop-code"></i> Online Coaching</h2>
+        <p>Get flexible, goal-oriented training with virtual guidance. Ideal for those who want structured support from anywhere.</p>
+        <table class="pricing-table">
+          <thead>
+            <tr><th><i class="fas fa-globe"></i> Plan</th><th>Price</th><th>Includes</th><th></th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Online Coaching</td>
+              <td>$85/month</td>
+              <td>
+                2 custom workouts/week<br>
+                1 weekly online check-in<br>
+                Ongoing messaging support
+              </td>
+              <td><a href="contact.html" class="button small">Get Started</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <section class="split contact">
+        <section class="alt">
+          <h3>Location</h3>
+          <p>Mobile & Online Coaching</p>
+        </section>
+        <section>
+          <h3>Email</h3>
+          <p><a href="mailto:movewellfitness25@gmail.com">movewellfitness25@gmail.com</a></p>
+        </section>
+        <section>
+          <h3>Social</h3>
+          <ul class="icons alt">
+            <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+            <li><a href="#" class="icon brands alt fa-youtube"><span class="label">YouTube</span></a></li>
+          </ul>
+        </section>
+      </section>
+    </footer>
+
+    <div id="copyright">
+      <ul><li>&copy; MoveWell</li><li>Design adapted from: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
