@@ -4687,3 +4687,37 @@ input, select, textarea {
 		}
 
 	}
+/* Custom Sticky Translucent Header */
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: rgba(255, 255, 255, 0.4); /* semi-transparent glassy look */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 1.5rem 0;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: none;
+}
+
+#header.shrink {
+  background-color: rgba(255, 255, 255, 0.97); /* almost solid on scroll */
+  padding: 0.75rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#header h2 {
+  font-size: 1.8rem;
+  color: #111;
+  margin: 0;
+  transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 600px) {
+  #header h2 {
+    font-size: 1.25rem;
+  }
+}
+
