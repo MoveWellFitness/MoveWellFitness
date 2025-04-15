@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -67,6 +68,9 @@
     <a href="mailto:movewellfitness25@gmail.com"><i class="fas fa-envelope"></i> movewellfitness25@gmail.com</a>
   </div>
 
+  <!-- Mobile Nav Toggle -->
+  <a href="#navPanel" class="navPanelToggle"></a>
+
   <!-- Intro -->
   <div id="intro" class="scrolly-section">
     <h1>Welcome to<br />MoveWell Fitness</h1>
@@ -134,7 +138,22 @@
   <div id="copyright">
     <ul><li>&copy; MoveWell</li><li>Design adapted from: <a href="https://html5up.net">HTML5 UP</a></li></ul>
   </div>
+</div>
 
+<!-- Mobile Nav Panel -->
+<div id="navPanel">
+  <nav>
+    <ul class="links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <ul class="icons">
+      <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+      <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+    </ul>
+  </nav>
 </div>
 
 <!-- Scripts -->
@@ -151,11 +170,9 @@
 
   document.getElementById('popup-form').addEventListener('submit', function(e) {
     e.preventDefault();
-
     const form = e.target;
     const data = new FormData(form);
     const message = document.getElementById('popup-message');
-
     fetch("https://formspree.io/f/mnnprzbw", {
       method: "POST",
       body: data,
@@ -178,7 +195,6 @@
     });
   });
 
-  // Scroll-in animations using class toggle
   document.addEventListener("DOMContentLoaded", function () {
     const sections = document.querySelectorAll('.scrolly-section');
     const observer = new IntersectionObserver(entries => {
@@ -188,10 +204,8 @@
         }
       });
     }, { threshold: 0.1 });
-
     sections.forEach(section => observer.observe(section));
   });
 </script>
-
 </body>
 </html>
