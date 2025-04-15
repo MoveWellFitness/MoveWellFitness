@@ -3,92 +3,122 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Services | MoveWell Fitness</title>
+  <title>Services | MoveWell Fitness</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .service-card {
+      border-radius: 1rem;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    .btn-primary {
+      border-radius: 30px;
+    }
+  </style>
 </head>
 <body>
 
-  <header class="bg-dark text-white text-center py-4">
-    <h1>MoveWell Fitness Services</h1>
-    <p>Your Path to a Healthier Life Starts Here</p>
-  </header>
+<header class="bg-dark text-white text-center py-4">
+  <h1>Our Services</h1>
+  <p>Train Anywhere. Achieve Everywhere.</p>
+</header>
 
-  <main class="container my-5">
-    <section id="personal-training">
-      <h2>Personal Training</h2>
-      <p>We bring personalized fitness directly to you — whether it's at your home, backyard, garage, or local park. Each session is tailored to your goals, fitness level, and preferences using equipment we provide. You'll receive expert guidance, real-time feedback, and accountability.</p>
-
-      <h4>1-on-1 Personal Training Packages</h4>
-      <div class="table-responsive">
-        <table class="table table-bordered">
-          <thead class="table-light">
-            <tr>
-              <th>Package</th>
-              <th>Sessions</th>
-              <th>Price per Session</th>
-              <th>Total Price</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Kickstart</td><td>4</td><td>$70</td><td>$280</td></tr>
-            <tr><td>Progress</td><td>8</td><td>$65</td><td>$520</td></tr>
-            <tr><td>Build</td><td>12</td><td>$60</td><td>$720</td></tr>
-            <tr><td>Transform</td><td>24</td><td>$55</td><td>$1,320</td></tr>
-          </tbody>
-        </table>
+<main class="container my-5">
+  <div class="row g-4">
+    <!-- Personal Training -->
+    <div class="col-md-6">
+      <div class="card service-card p-4">
+        <h2>1-on-1 Personal Training</h2>
+        <p>Personalized fitness at your location—home, park, or backyard. Includes expert guidance, accountability, and all equipment provided.</p>
+        <h5 class="mt-3">Packages:</h5>
+        <ul class="list-group mb-3">
+          <li class="list-group-item">Kickstart (4 sessions): $70/session – $280 total</li>
+          <li class="list-group-item">Progress (8 sessions): $65/session – $520 total</li>
+          <li class="list-group-item">Build (12 sessions): $60/session – $720 total</li>
+          <li class="list-group-item">Transform (24 sessions): $55/session – $1,320 total</li>
+        </ul>
+        <a href="#form" class="btn btn-primary w-100">Get Started</a>
       </div>
-    </section>
+    </div>
 
-    <section id="partner-training" class="mt-5">
-      <h2>Partner Training (2 People)</h2>
-      <p>Work out with a friend or partner and stay motivated. These packages include joint training sessions tailored for two people with shared goals or complementary levels.</p>
-
-      <h4>Partner Training Packages</h4>
-      <div class="table-responsive">
-        <table class="table table-bordered">
-          <thead class="table-light">
-            <tr>
-              <th>Package</th>
-              <th>Sessions</th>
-              <th>Price/Session</th>
-              <th>Total Price</th>
-              <th>Price/Person</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr><td>Kickstart</td><td>4</td><td>$80</td><td>$320</td><td>$160</td></tr>
-            <tr><td>Progress</td><td>8</td><td>$75</td><td>$600</td><td>$300</td></tr>
-            <tr><td>Build</td><td>12</td><td>$70</td><td>$840</td><td>$420</td></tr>
-            <tr><td>Transform</td><td>24</td><td>$65</td><td>$1,560</td><td>$780</td></tr>
-          </tbody>
-        </table>
+    <!-- Partner Training -->
+    <div class="col-md-6">
+      <div class="card service-card p-4">
+        <h2>Partner Training (2 People)</h2>
+        <p>Train with a friend or partner! Sessions are tailored for dual progress with shared or complementary fitness goals.</p>
+        <h5 class="mt-3">Packages:</h5>
+        <ul class="list-group mb-3">
+          <li class="list-group-item">Kickstart: $80/session – $320 total ($160/person)</li>
+          <li class="list-group-item">Progress: $75/session – $600 total ($300/person)</li>
+          <li class="list-group-item">Build: $70/session – $840 total ($420/person)</li>
+          <li class="list-group-item">Transform: $65/session – $1,560 total ($780/person)</li>
+        </ul>
+        <a href="#form" class="btn btn-primary w-100">Get Started</a>
       </div>
-    </section>
+    </div>
 
-    <section id="online-coaching" class="mt-5">
-      <h2>Online Coaching</h2>
-      <p>Perfect for those who want structure and results with flexibility. Receive 2 custom workouts per week (8/month), weekly check-ins, and ongoing messaging support. All tailored to your goals and lifestyle.</p>
+    <!-- Online Coaching -->
+    <div class="col-md-6">
+      <div class="card service-card p-4">
+        <h2>Online Coaching</h2>
+        <p>Flexible and remote coaching to match your lifestyle. Weekly custom workouts, check-ins, and full support—wherever you are.</p>
+        <h5 class="mt-3">Pricing:</h5>
+        <p><strong>$85/month</strong></p>
+        <ul class="list-group mb-3">
+          <li class="list-group-item">2 Custom Workouts/Week</li>
+          <li class="list-group-item">1 Weekly Online Check-In</li>
+          <li class="list-group-item">Ongoing Messaging Support</li>
+        </ul>
+        <p><strong>Special Offers:</strong><br>
+          First month: $49<br>
+          Intro 2-Pack: $100<br>
+          Referral Bonus: $50 off for both you and a friend
+        </p>
+        <a href="#form" class="btn btn-primary w-100">Get Started</a>
+      </div>
+    </div>
+  </div>
 
-      <h4>Online Coaching Pricing</h4>
-      <p><strong>Price:</strong> $85/month</p>
-      <ul>
-        <li>2 Custom Workouts per Week</li>
-        <li>1 Weekly Online Check-In</li>
-        <li>Ongoing Messaging Support</li>
-      </ul>
+  <!-- Lead Capture Form -->
+  <section id="form" class="mt-5 pt-5">
+    <div class="card p-4 shadow-sm">
+      <h2 class="text-center mb-4">Get Started with MoveWell</h2>
+      <form action="mailto:movewellfitness25@gmail.com" method="POST" enctype="text/plain">
+        <div class="mb-3">
+          <label for="name" class="form-label">Your Name</label>
+          <input type="text" class="form-control" id="name" name="Name" required />
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Your Email</label>
+          <input type="email" class="form-control" id="email" name="Email" required />
+        </div>
+        <div class="mb-3">
+          <label for="service" class="form-label">Interested In</label>
+          <select class="form-select" id="service" name="Service">
+            <option>1-on-1 Personal Training</option>
+            <option>Partner Training</option>
+            <option>Online Coaching</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">Additional Notes</label>
+          <textarea class="form-control" id="message" rows="4" name="Message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success w-100">Submit</button>
+      </form>
+    </div>
+  </section>
+</main>
 
-      <h5 class="mt-4">Special Offers</h5>
-      <ul>
-        <li>First Month of Online Coaching: <strong>$49</strong> (limited time offer)</li>
-        <li>Intro Pack – Try 2 Personal Training Sessions: <strong>$100</strong></li>
-        <li>Referral Bonus: Bring a friend and you both get <strong>$50 off</strong> your next package</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer class="bg-light text-center py-3">
-    <p>&copy; 2025 MoveWell Fitness. All rights reserved.</p>
-  </footer>
+<footer class="bg-light text-center py-3 mt-5">
+  <p>&copy; 2025 MoveWell Fitness. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
