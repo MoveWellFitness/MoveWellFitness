@@ -20,12 +20,12 @@
       font-family: "Source Sans Pro", sans-serif;
     }
 
-    .logo-hero {
+    .hero-logo {
       text-align: center;
-      padding: 3rem 1rem 1rem 1rem;
+      margin-top: 60px;
     }
 
-    .logo-hero img {
+    .hero-logo img {
       height: 160px;
       max-width: 100%;
       margin-bottom: 1.5rem;
@@ -83,17 +83,21 @@
         font-size: 1.75rem;
       }
 
-      .logo-hero img {
+      .hero-logo img {
         height: 120px;
       }
     }
   </style>
 </head>
-<body>
+<body class="is-preload">
 
-<!-- Nav -->
+<!-- Header + Navigation Bar (same as index.html) -->
+<header id="header">
+  <a href="index.html" class="logo">MoveWell Fitness</a>
+</header>
+
 <nav id="nav">
-  <ul class="links" style="text-align:center; padding: 1rem 0;">
+  <ul class="links">
     <li><a href="index.html">Home</a></li>
     <li class="active"><a href="about.html">About</a></li>
     <li><a href="services.html">Services</a></li>
@@ -102,7 +106,7 @@
 </nav>
 
 <!-- Hero Logo -->
-<section class="logo-hero">
+<section class="hero-logo">
   <img src="images/Logo.png" alt="MoveWell Fitness Logo" />
 </section>
 
