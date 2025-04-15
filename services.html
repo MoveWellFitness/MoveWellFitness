@@ -39,26 +39,17 @@
       background-color: #f0f0f0;
     }
     .button.primary.centered {
-  display: block;
-  margin: 1rem auto;
-  width: fit-content;
+  display: inline-block;
   background-color: #007bff;
   color: white;
-  padding: 0.6rem 1.5rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 5px;
   font-weight: bold;
   text-transform: uppercase;
   text-align: center;
-}
-  display: block;
+  text-decoration: none;
   margin: 1rem auto;
-  width: fit-content;
-  background-color: #007bff;
-  color: white;
-  padding: 0.6rem 1.2rem;
-  border-radius: 5px;
-  font-weight: bold;
-  text-transform: uppercase;
+  transition: background-color 0.3s;
 }
 .button.primary.centered:hover {
   background-color: #0056b3;
@@ -100,21 +91,7 @@
 </head>
 <body class="is-preload">
 
-<!-- Popup Form -->
-<div id="popup-form-container">
-  <div id="popup-form-box">
-    <span class="close" onclick="document.getElementById('popup-form-container').style.display='none'">&times;</span>
-    <h2>Get Started</h2>
-    <form id="popup-form" action="https://formspree.io/f/mnnprzbw" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required style="width: 100%; margin-bottom: 10px;" />
-      <input type="email" name="email" placeholder="Your Email" required style="width: 100%; margin-bottom: 10px;" />
-      <input type="tel" name="phone" placeholder="Your Phone Number (optional)" style="width: 100%; margin-bottom: 10px;" />
-      <input type="text" name="interest" id="popup-interest" readonly style="width: 100%; margin-bottom: 10px; background: #eee;" />
-      <textarea name="message" placeholder="Any notes or questions?" rows="4" style="width: 100%; margin-bottom: 10px;"></textarea>
-      <button type="submit" class="button primary">Submit</button>
-      <p id="form-confirmation" style="color: green; display: none; margin-top: 1rem;">You're all set! A coach will be in touch to get you started.</p>
-    </form>
-  </div>
+
 </div>
 
 <!-- Wrapper -->
@@ -180,7 +157,7 @@
             <tr><td>Transform</td><td>24</td><td>$55</td><td>$1,320</td></tr>
           </tbody>
         </table>
-        <a class="button primary centered" data-service="1-on-1 Personal Training">Get Started</a>
+        <a class="button primary centered" >Get Started</a>
       </div>
 
       <!-- Partner Training -->
@@ -195,7 +172,7 @@
             <tr><td>Transform</td><td>24</td><td>$65</td><td>$1,560</td><td>$780</td></tr>
           </tbody>
         </table>
-        <a class="button primary centered" data-service="Partner Training">Get Started</a>
+        <a class="button primary centered" >Get Started</a>
       </div>
 
       <!-- Online Coaching -->
@@ -207,7 +184,7 @@
             <tr><td>Standard</td><td>$85/mo</td><td>2 Custom Workouts/Week, Weekly Check-In, Messaging Support</td></tr>
           </tbody>
         </table>
-        <a class="button primary centered" data-service="Online Coaching">Get Started</a>
+        <a class="button primary centered" >Get Started</a>
       </div>
 
     </section>
@@ -285,29 +262,7 @@
   });
 
   // AJAX form submission
-  document.getElementById('popup-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const form = e.target;
-    const data = new FormData(form);
-    const message = document.getElementById('form-confirmation');
-
-    fetch(form.action, {
-      method: "POST",
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    }).then(response => {
-      if (response.ok) {
-        message.style.display = 'block';
-        form.reset();
-        setTimeout(() => {
-          document.getElementById('popup-form-container').style.display = 'none';
-          message.style.display = 'none';
-        }, 2500);
-      } else {
-        alert("There was a problem. Please try again.");
-      }
-    }).catch(() => {
-      alert("Oops! Submission failed.");
+  
     });
   });
 </script>
