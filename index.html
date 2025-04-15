@@ -29,6 +29,7 @@
             max-width: 500px;
             box-shadow: 0 0 20px rgba(0,0,0,0.3);
             position: relative;
+            animation: slideIn 0.5s ease;
         }
 
         .modal .close {
@@ -44,16 +45,33 @@
             color: #000;
         }
 
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        #floatingCta {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+            background: #e91e63;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
         @media screen and (max-width: 736px) {
             .modal-content {
                 width: 90%;
             }
-
             input[type="text"], input[type="email"], textarea {
                 width: 100%;
                 font-size: 16px;
             }
-
             .button {
                 width: 100%;
                 font-size: 18px;
@@ -64,15 +82,18 @@
 </head>
 <body class="is-preload">
 
+<!-- Floating Button -->
+<a href="#" id="floatingCta">🎁 Free Session</a>
+
 <!-- Wrapper -->
 <div id="wrapper" class="fade-in">
 
-    <!-- Intro -->
+    <!-- Intro / Hero -->
     <div id="intro">
-        <h1>Welcome to<br />MoveWell Fitness</h1>
-        <p>Your journey to a healthier lifestyle starts here.</p>
+        <h1>Start Your Fitness Journey<br />With a Complimentary Session</h1>
+        <p>Experience mobile personal training or online coaching — no commitment, just results.</p>
         <ul class="actions">
-            <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Explore</a></li>
+            <li><a href="#" class="button primary large" id="getStartedBtn">Claim Free Session</a></li>
         </ul>
     </div>
 
@@ -93,35 +114,20 @@
 
     <!-- Main -->
     <div id="main">
-
-        <!-- Featured Section -->
-        <article class="post featured">
-            <header class="major">
-                <h2><a href="#">Strong. Focused. Fit.</a></h2>
-                <p>Empowering your fitness journey with expert guidance, dynamic programs, and a supportive community.</p>
-            </header>
-            <a href="#" class="image main"><img src="images/fitness-feature.jpg" alt="Fitness Training" /></a>
-            <ul class="actions special">
-                <li><a href="#" class="button large" id="getStartedBtn">Get Started</a></li>
-            </ul>
-        </article>
-
-        <!-- Posts Section -->
         <section class="posts">
             <article>
-                <header><h2><a href="#">Personal Training</a></h2></header>
-                <a href="#" class="image fit"><img src="images/personal-training.jpg" alt="" /></a>
-                <p>One-on-one training tailored to your goals and schedule. Train smarter, feel stronger.</p>
-                <ul class="actions special"><li><a href="services.html" class="button">Learn More</a></li></ul>
+                <header><h2><a href="#">Mobile Personal Training</a></h2></header>
+                <a href="#" class="image fit"><img src="images/mobile-training.jpg" alt="Mobile Training" /></a>
+                <p>We bring personalized fitness to your home, park, or office. All the benefits of a gym without the hassle.<br><strong>Book a complimentary session today!</strong></p>
+                <ul class="actions special"><li><a href="#" class="button" id="getStartedBtn2">Learn More</a></li></ul>
             </article>
             <article>
-                <header><h2><a href="#">Group Classes</a></h2></header>
-                <a href="#" class="image fit"><img src="images/group-class.jpg" alt="" /></a>
-                <p>Fun, motivating group sessions led by certified trainers to keep you energized and engaged.</p>
-                <ul class="actions special"><li><a href="services.html" class="button">Join a Class</a></li></ul>
+                <header><h2><a href="#">Online Coaching</a></h2></header>
+                <a href="#" class="image fit"><img src="images/online-coaching.jpg" alt="Online Coaching" /></a>
+                <p>Train on your terms with custom workouts, live check-ins, and 24/7 support – all from your phone.<br><strong>Try your first coaching session free!</strong></p>
+                <ul class="actions special"><li><a href="#" class="button" id="getStartedBtn3">Start Coaching</a></li></ul>
             </article>
         </section>
-
     </div>
 
     <!-- Footer -->
@@ -133,14 +139,18 @@
             </section>
             <section>
                 <h3>Phone</h3>
-                <p><a href="#">(555) 123-4567</a></p>
+                <p><a href="tel:5555555555">(555) 555-5555</a></p>
             </section>
             <section>
                 <h3>Email</h3>
-                <p><a href="mailto:info@movewellfitness.com">info@movewellfitness.com</a></p>
+                <p><a href="mailto:movewellfitness25@gmail.com">movewellfitness25@gmail.com</a></p>
             </section>
             <section>
                 <h3>Follow Us</h3>
+                <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem;">
+                    <span><strong>📧 Email:</strong> <a href="mailto:movewellfitness25@gmail.com">movewellfitness25@gmail.com</a></span>
+                    <span><strong>📞 Phone:</strong> <a href="tel:5555555555">(555) 555-5555</a></span>
+                </div>
                 <ul class="icons alt">
                     <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
                     <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
@@ -157,28 +167,28 @@
 
 </div>
 
-<!-- Get Started Modal -->
-<div id="getStartedModal" class="modal">
+<!-- Complimentary Session Modal -->
+<div id="getStartedPopup" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
-        <h2>Get Started with MoveWell Fitness</h2>
+        <h2>Claim Your Complimentary Fitness Session</h2>
         <form method="POST" action="https://formspree.io/f/mnnprzbw">
             <div class="fields">
                 <div class="field">
                     <label for="name">Name</label>
-                    <input type="text" name="name" id="name" required />
+                    <input type="text" name="name" id="popup-name" required />
                 </div>
                 <div class="field">
                     <label for="email">Email</label>
-                    <input type="email" name="email" id="email" required />
+                    <input type="email" name="email" id="popup-email" required />
                 </div>
                 <div class="field">
                     <label for="goal">What’s your fitness goal?</label>
-                    <textarea name="goal" id="goal" rows="3" required></textarea>
+                    <textarea name="goal" id="popup-goal" rows="3" required></textarea>
                 </div>
             </div>
             <ul class="actions">
-                <li><input type="submit" value="Send" class="primary" /></li>
+                <li><input type="submit" value="Book My Free Session" class="primary" /></li>
             </ul>
         </form>
     </div>
@@ -193,24 +203,39 @@
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 <script>
-    // Modal JS Logic
     document.addEventListener("DOMContentLoaded", function () {
-        const modal = document.getElementById("getStartedModal");
-        const openBtn = document.getElementById("getStartedBtn");
-        const closeBtn = document.querySelector(".modal .close");
+        const popup = document.getElementById("getStartedPopup");
+        const closeBtn = document.querySelector("#getStartedPopup .close");
+        const triggers = [
+            document.getElementById("getStartedBtn"),
+            document.getElementById("getStartedBtn2"),
+            document.getElementById("getStartedBtn3"),
+            document.getElementById("floatingCta")
+        ];
 
-        openBtn.addEventListener("click", function (e) {
-            e.preventDefault();
-            modal.style.display = "flex";
+        // Open modal from any trigger
+        triggers.forEach(btn => {
+            if (btn) {
+                btn.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    popup.style.display = "flex";
+                });
+            }
         });
 
+        // Auto show popup after 5 seconds
+        setTimeout(function () {
+            popup.style.display = "flex";
+        }, 5000);
+
+        // Close modal
         closeBtn.addEventListener("click", function () {
-            modal.style.display = "none";
+            popup.style.display = "none";
         });
 
         window.addEventListener("click", function (e) {
-            if (e.target === modal) {
-                modal.style.display = "none";
+            if (e.target === popup) {
+                popup.style.display = "none";
             }
         });
     });
