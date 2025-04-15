@@ -1,162 +1,155 @@
 <!DOCTYPE HTML>
 <!--
-	Updated for MoveWell
+	MoveWell Website using Massively Theme
 -->
 <html>
-	<head>
-		<title>MoveWell | Personal Training Reinvented</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<head>
+	<title>MoveWell | Personal Training Reinvented</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload">
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+<!-- Sign Up Popup -->
+<div id="popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); justify-content: center; align-items: center; z-index: 999;">
+	<div style="background: white; padding: 2rem; border-radius: 10px; max-width: 400px; text-align: center;">
+		<h2>Free Consultation</h2>
+		<p>Sign up now to get a personalized fitness consultation at no cost!</p>
+		<input type="email" placeholder="Enter your email" style="width: 100%; padding: 0.5rem; margin-top: 1rem;" />
+		<br>
+		<button onclick="document.getElementById('popup').style.display='none'" style="margin-top: 1rem; padding: 0.5rem 1rem;">Submit</button>
+	</div>
+</div>
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Welcome to<br />
-						MoveWell</h1>
-						<p>Mobile Personal Training & Online Fitness Coaching<br />
-						Tailored fitness plans designed for your lifestyle.<br />
-						Get fit anytime, anywhere with expert guidance.</p>
-						<ul class="actions">
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Explore</a></li>
-						</ul>
-					</div>
+<!-- Wrapper -->
+<div id="wrapper" class="fade-in">
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">MoveWell</a>
-					</header>
+	<!-- Intro -->
+	<div id="intro">
+		<h1>Welcome to<br />MoveWell</h1>
+		<p>Mobile Personal Training & Online Fitness Coaching<br />
+		Tailored fitness plans for your lifestyle.</p>
+		<ul class="actions">
+			<li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Explore</a></li>
+		</ul>
+	</div>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Home</a></li>
-							<li><a href="about.html">About</a></li>
-							<li><a href="services.html">Services</a></li>
-							<li><a href="contact.html">Contact</a></li>
-						</ul>
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
-						</ul>
-					</nav>
+	<!-- Header -->
+	<header id="header">
+		<a href="index.html" class="logo">MoveWell</a>
+	</header>
 
-				<!-- Main -->
-					<div id="main">
+	<!-- Nav -->
+	<nav id="nav">
+		<ul class="links">
+			<li class="active"><a href="index.html">Home</a></li>
+			<li><a href="about.html">About</a></li>
+			<li><a href="services.html">Services</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+		<ul class="icons">
+			<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+			<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+			<li><a href="#" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+		</ul>
+	</nav>
 
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<span class="date">April 2025</span>
-									<h2><a href="#">Personal Training<br />
-									That Moves With You</a></h2>
-									<p>Whether you're working out at home, in the park, or on the go—<br />
-									MoveWell brings professional coaching and motivation to your lifestyle.<br />
-									No equipment? No problem. All fitness levels welcome.</p>
-								</header>
-								<a href="#" class="image main"><img src="images/movewell-feature.jpg" alt="MoveWell Training" /></a>
-								<ul class="actions special">
-									<li><a href="#" class="button large">Start Your Journey</a></li>
-								</ul>
-							</article>
+	<!-- Main -->
+	<div id="main">
 
-						<!-- Services Highlights -->
-						<section class="posts">
-							<article>
-								<header><span class="date">Programs</span>
-								<h2><a href="#">1-on-1 Coaching</a></h2></header>
-								<a href="#" class="image fit"><img src="images/coaching.jpg" alt="1-on-1 Coaching" /></a>
-								<p>Personalized sessions that adapt to your schedule and goals. Work with certified trainers who bring the gym to you.</p>
-								<ul class="actions special">
-									<li><a href="#" class="button">Learn More</a></li>
-								</ul>
-							</article>
-							<article>
-								<header><span class="date">Virtual</span>
-								<h2><a href="#">Online Programs</a></h2></header>
-								<a href="#" class="image fit"><img src="images/virtual.jpg" alt="Online Programs" /></a>
-								<p>Train at your pace with guided workouts and ongoing support. Track progress, stay accountable, and reach your goals from anywhere.</p>
-								<ul class="actions special">
-									<li><a href="#" class="button">Explore Options</a></li>
-								</ul>
-							</article>
-						</section>
+		<!-- Featured Post -->
+		<article class="post featured">
+			<header class="major">
+				<span class="date">April 2025</span>
+				<h2><a href="#">Personal Training<br />That Moves With You</a></h2>
+				<p>Whether you're working out at home, in the park, or on the go—
+				MoveWell brings expert coaching and fitness to your lifestyle.
+				No equipment? No problem. All fitness levels welcome.</p>
+			</header>
+			<a href="#" class="image main"><img src="images/movewell-feature.jpg" alt="MoveWell Training" /></a>
+			<ul class="actions special">
+				<li><a href="#" class="button large">Start Your Journey</a></li>
+			</ul>
+		</article>
 
-						<!-- Footer -->
-						<footer>
-							<div class="pagination">
-								<a href="#" class="page active">1</a>
-								<a href="#" class="page">2</a>
-								<a href="#" class="page">3</a>
-								<a href="#" class="next">Next</a>
-							</div>
-						</footer>
-					</div>
+		<!-- About / Services -->
+		<section class="posts">
+			<article>
+				<header><span class="date">About Us</span>
+				<h2><a href="about.html">What is MoveWell?</a></h2></header>
+				<a href="about.html" class="image fit"><img src="images/about.jpg" alt="About MoveWell" /></a>
+				<p>We help busy people stay fit with mobile personal training and online programs built to adapt to your schedule.</p>
+				<ul class="actions special">
+					<li><a href="about.html" class="button">Learn More</a></li>
+				</ul>
+			</article>
+			<article>
+				<header><span class="date">Services</span>
+				<h2><a href="services.html">What We Offer</a></h2></header>
+				<a href="services.html" class="image fit"><img src="images/services.jpg" alt="MoveWell Services" /></a>
+				<p>From one-on-one coaching to online programs and group training — we have something for every fitness journey.</p>
+				<ul class="actions special">
+					<li><a href="services.html" class="button">Explore Services</a></li>
+				</ul>
+			</article>
+			<article>
+				<header><span class="date">Contact</span>
+				<h2><a href="contact.html">Let’s Connect</a></h2></header>
+				<a href="contact.html" class="image fit"><img src="images/contact.jpg" alt="Contact MoveWell" /></a>
+				<p>Reach out for questions, feedback, or to schedule your free consultation. We're excited to hear from you!</p>
+				<ul class="actions special">
+					<li><a href="contact.html" class="button">Get in Touch</a></li>
+				</ul>
+			</article>
+		</section>
 
-				<!-- Contact Footer -->
-					<footer id="footer">
-						<section>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field">
-										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
-									</div>
-									<div class="field">
-										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
-									</div>
-									<div class="field">
-										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
-									</div>
-								</div>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-						</section>
-						<section class="split contact">
-							<section class="alt">
-								<h3>Location</h3>
-								<p>Training across your city and online</p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="mailto:contact@movewellfit.com">contact@movewellfit.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands alt fa-youtube"><span class="label">YouTube</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
+	</div>
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; MoveWell</li><li>Design adapted from: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+	<!-- Footer -->
+	<footer id="footer">
+		<section class="split contact">
+			<section class="alt">
+				<h3>Location</h3>
+				<p>Training across your city and online</p>
+			</section>
+			<section>
+				<h3>Email</h3>
+				<p><a href="mailto:contact@movewellfit.com">contact@movewellfit.com</a></p>
+			</section>
+			<section>
+				<h3>Social</h3>
+				<ul class="icons alt">
+					<li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+					<li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon brands alt fa-youtube"><span class="label">YouTube</span></a></li>
+				</ul>
+			</section>
+		</section>
+	</footer>
 
-			</div>
+	<!-- Copyright -->
+	<div id="copyright">
+		<ul><li>&copy; MoveWell</li><li>Design adapted from: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+	</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+</div>
 
-	</body>
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+	// Show popup after delay
+	setTimeout(() => {
+		document.getElementById('popup').style.display = 'flex';
+	}, 3000);
+</script>
+
+</body>
 </html>
