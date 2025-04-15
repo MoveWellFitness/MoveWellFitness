@@ -67,7 +67,7 @@
       font-weight: bold;
     }
   
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 600px) {
       #popup-form-box {
         padding: 1rem;
         max-width: 90%;
@@ -79,6 +79,7 @@
       input, select, textarea {
         font-size: 1rem;
         width: 100%;
+        margin-bottom: 1rem;
       }
     }
 
@@ -232,7 +233,7 @@
       <button type="submit" class="button primary centered" style="margin-top: 1.5rem;">Submit</button>
     </form>
 
-    <button type="button" id="exit-popup" class="button primary centered" style="margin-top: 1rem; background-color: #ccc; color: #000;">Exit</button>
+      <button type="button" id="exit-popup" class="button primary centered" style="margin-top: 1rem; background-color: #ccc; color: #000;">Exit</button>
 
     <div id="confirmation-screen" style="display: none; text-align: center; padding-top: 1rem;">
       <h2>🎉 You're All Set!</h2>
@@ -304,15 +305,19 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("Oops! Something went wrong with submission.");
     });
   
-    document.getElementById('exit-popup').addEventListener('click', function () {
-      popupContainer.style.display = 'none';
-      popupForm.style.display = 'block';
-      confirmation.style.display = 'none';
-      popupForm.reset();
-    });
+    var exitButton = document.getElementById('exit-popup');
+    if (exitButton) {
+      exitButton.addEventListener('click', function () {
+        popupContainer.style.display = 'none';
+        popupForm.style.display = 'block';
+        confirmation.style.display = 'none';
+        popupForm.reset();
+      });
+    }
 
 });
 </script>
 
 </body>
 </html>
+
