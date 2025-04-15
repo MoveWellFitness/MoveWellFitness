@@ -66,6 +66,28 @@
       cursor: pointer;
       font-weight: bold;
     }
+  
+    .special-offers {
+      background: #ffeaa7;
+      padding: 1.5rem;
+      border-left: 5px solid #f39c12;
+      margin-bottom: 2rem;
+      border-radius: 5px;
+    }
+    .service-table {
+      width: 100%;
+      margin-bottom: 2rem;
+      border-collapse: collapse;
+    }
+    .service-table th, .service-table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+    }
+    .service-table th {
+      background-color: #f0f0f0;
+    }
+
   </style>
 </head>
 <body>
@@ -100,7 +122,59 @@
         <p>Real coaching. Real people. Real progress. On your terms.</p>
       </header>
 
-      <!-- Example Service Section -->
+      
+      <!-- Special Offers -->
+      <div class="special-offers scrolly-section">
+        <h2><i class="fas fa-gift"></i> Special Offers</h2>
+        <ul>
+          <li><strong>🎉 First Month Online Coaching: $49</strong></li>
+          <li><strong>💪 Try 2 Personal Training Sessions: $100 intro pack</strong></li>
+          <li><strong>🤝 Referral Bonus: Bring a friend and you each get $50 off</strong></li>
+        </ul>
+      </div>
+
+      <!-- 1-on-1 Training -->
+      <div class="scrolly-section">
+        <h2><i class="fas fa-user"></i> 1-on-1 Personal Training</h2>
+        <table class="service-table">
+          <thead><tr><th>Package</th><th>Sessions</th><th>Rate</th><th>Total</th></tr></thead>
+          <tbody>
+            <tr><td>Kickstart</td><td>4</td><td>$70</td><td>$280</td></tr>
+            <tr><td>Progress</td><td>8</td><td>$65</td><td>$520</td></tr>
+            <tr><td>Build</td><td>12</td><td>$60</td><td>$720</td></tr>
+            <tr><td>Transform</td><td>24</td><td>$55</td><td>$1,320</td></tr>
+          </tbody>
+        </table>
+        <a class="button primary centered" data-service="1-on-1 Personal Training">Get Started</a>
+      </div>
+
+      <!-- Partner Training -->
+      <div class="scrolly-section">
+        <h2><i class="fas fa-users"></i> Partner Training (2 People)</h2>
+        <table class="service-table">
+          <thead><tr><th>Package</th><th>Sessions</th><th>Rate</th><th>Total</th><th>Per Person</th></tr></thead>
+          <tbody>
+            <tr><td>Kickstart</td><td>4</td><td>$80</td><td>$320</td><td>$160</td></tr>
+            <tr><td>Progress</td><td>8</td><td>$75</td><td>$600</td><td>$300</td></tr>
+            <tr><td>Build</td><td>12</td><td>$70</td><td>$840</td><td>$420</td></tr>
+            <tr><td>Transform</td><td>24</td><td>$65</td><td>$1,560</td><td>$780</td></tr>
+          </tbody>
+        </table>
+        <a class="button primary centered" data-service="Partner Training">Get Started</a>
+      </div>
+
+      <!-- Online Coaching -->
+      <div class="scrolly-section">
+        <h2><i class="fas fa-laptop"></i> Online Coaching</h2>
+        <table class="service-table">
+          <thead><tr><th>Plan</th><th>Price</th><th>Includes</th></tr></thead>
+          <tbody>
+            <tr><td>Standard</td><td>$85/mo</td><td>2 Custom Workouts/Week, Weekly Check-In, Messaging Support</td></tr>
+          </tbody>
+        </table>
+        <a class="button primary centered" data-service="Online Coaching">Get Started</a>
+      </div>
+
       <div class="scrolly-section">
         <h2><i class="fas fa-user"></i> 1-on-1 Personal Training</h2>
         <p>Customized training to fit your goals and schedule.</p>
@@ -129,7 +203,20 @@
         <p><a href="mailto:movewellfitness25@gmail.com">movewellfitness25@gmail.com</a></p>
       </section>
     </section>
+  
+    <section>
+      <h3>Social</h3>
+      <ul class="icons alt">
+        <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+        <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+      </ul>
+    </section>
   </footer>
+  <div id="copyright">
+    <ul><li>&copy; MoveWell</li><li>Design adapted from: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+  </div>
+</div>
+
 </div>
 
 <!-- Popup Form -->
@@ -238,4 +325,3 @@ document.addEventListener("DOMContentLoaded", function () {
 
 </body>
 </html>
-
