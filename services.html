@@ -1,5 +1,4 @@
-# Rebuilding a full updated `services.html` file with all original features + requested updates
-services_html_code = """
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -40,6 +39,19 @@ services_html_code = """
       background-color: #f0f0f0;
     }
     .button.primary.centered {
+  display: block;
+  margin: 1rem auto;
+  width: fit-content;
+  background-color: #007bff;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.button.primary.centered:hover {
+  background-color: #0056b3;
+}
       display: block;
       margin: 1rem auto;
       width: fit-content;
@@ -291,11 +303,3 @@ services_html_code = """
 
 </body>
 </html>
-"""
-
-# Save to file
-path = Path("/mnt/data/services.html")
-path.write_text(services_html_code)
-
-path.name
-
