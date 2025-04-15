@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -39,30 +37,25 @@
     .service-table th {
       background-color: #f0f0f0;
     }
-.button.primary.centered {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #007bff;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
-  margin: 1rem auto;
-  transition: background-color 0.3s;
-  height: 48px; /* optional for consistent height */
-  line-height: 1;
-}
-.button.primary.centered:hover {
-  background-color: #0056b3;
-}
-
-      display: block;
+    .button.primary.centered {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #007bff;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 5px;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      text-decoration: none;
       margin: 1rem auto;
-      width: fit-content;
+      transition: background-color 0.3s;
+      height: 48px;
+      line-height: 1;
+    }
+    .button.primary.centered:hover {
+      background-color: #0056b3;
     }
     #popup-form-container {
       display: none;
@@ -82,34 +75,27 @@
       border-radius: 10px;
       max-width: 400px;
       width: 90%;
-      position: relative;
       text-align: center;
+      position: relative;
     }
     #popup-form-box .close {
       position: absolute;
       top: 10px;
       right: 15px;
-      font-size: 20px;
-      cursor: pointer;
+      font-size: 24px;
       font-weight: bold;
+      cursor: pointer;
     }
   </style>
 </head>
 <body class="is-preload">
 
-
-<!-- Wrapper -->
 <div id="wrapper">
-
-  <!-- Mobile Nav Toggle -->
   <a href="#navPanel" class="navPanelToggle"></a>
-
-  <!-- Header -->
   <header id="header">
     <a href="index.html" class="logo">MoveWell</a>
   </header>
 
-  <!-- Nav -->
   <nav id="nav">
     <ul class="links">
       <li><a href="index.html">Home</a></li>
@@ -131,7 +117,6 @@
     </ul>
   </nav>
 
-  <!-- Main -->
   <div id="main">
     <section class="post">
       <header class="major scrolly-section">
@@ -139,7 +124,6 @@
         <p>Real coaching. Real people. Real progress. On your terms.</p>
       </header>
 
-      <!-- Special Offers -->
       <div class="special-offers scrolly-section">
         <h2><i class="fas fa-gift"></i> Special Offers</h2>
         <ul>
@@ -149,7 +133,6 @@
         </ul>
       </div>
 
-      <!-- 1-on-1 Training -->
       <div class="scrolly-section">
         <h2><i class="fas fa-user"></i> 1-on-1 Personal Training</h2>
         <table class="service-table">
@@ -164,7 +147,6 @@
         <a class="button primary centered" data-service="1-on-1 Personal Training">Get Started</a>
       </div>
 
-      <!-- Partner Training -->
       <div class="scrolly-section">
         <h2><i class="fas fa-users"></i> Partner Training (2 People)</h2>
         <table class="service-table">
@@ -179,7 +161,6 @@
         <a class="button primary centered" data-service="Partner Training">Get Started</a>
       </div>
 
-      <!-- Online Coaching -->
       <div class="scrolly-section">
         <h2><i class="fas fa-laptop"></i> Online Coaching</h2>
         <table class="service-table">
@@ -190,11 +171,9 @@
         </table>
         <a class="button primary centered" data-service="Online Coaching">Get Started</a>
       </div>
-
     </section>
   </div>
 
-  <!-- Footer -->
   <footer id="footer" class="scrolly-section">
     <section class="split contact">
       <section class="alt">
@@ -220,80 +199,28 @@
   </div>
 </div>
 
-<!-- Mobile Nav Panel -->
-<div id="navPanel">
-  <nav>
-    <ul class="links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <ul class="icons">
-      <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-      <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-    </ul>
-  </nav>
+<!-- Popup Form -->
+<div id="popup-form-container">
+  <div id="popup-form-box">
+    <span class="close">&times;</span>
+    <h2>Get Started</h2>
+    <form id="popup-form" method="POST" action="https://formspree.io/f/mnqkgznv">
+      <input type="hidden" id="popup-service" name="Service">
+      <div><input type="text" name="Name" placeholder="Your Name" required></div>
+      <div><input type="email" name="Email" placeholder="Your Email" required></div>
+      <div><input type="tel" name="Phone" placeholder="Your Phone Number"></div>
+      <div><textarea name="Message" placeholder="Your Goals or Questions" rows="4"></textarea></div>
+      <button type="submit" class="button primary centered">Submit</button>
+    </form>
+    <div id="confirmation-screen" style="display: none; text-align: center; padding-top: 1rem;">
+      <h2>🎉 You're All Set!</h2>
+      <p>Thanks for getting started. We'll reach out to you shortly.</p>
+    </div>
+  </div>
 </div>
 
 <!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const sections = document.querySelectorAll('.scrolly-section');
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1 });
-    sections.forEach(section => observer.observe(section));
-  });
-
-  // Popup activation
-  document.querySelectorAll('.button[data-service]').forEach(button => {
-    button.addEventListener('click', () => {
-      const interest = button.getAttribute('data-service');
-      document.getElementById('popup-interest').value = interest;
-      document.getElementById('popup-form-container').style.display = 'flex';
-    });
-  });
-
-  // AJAX form submission
-  document.getElementById('popup-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const form = e.target;
-    const data = new FormData(form);
-    const message = document.getElementById('form-confirmation');
-
-    fetch(form.action, {
-      method: "POST",
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    }).then(response => {
-      if (response.ok) {
-        message.style.display = 'block';
-        form.reset();
-        setTimeout(() => {
-          document.getElementById('popup-form-container').style.display = 'none';
-          message.style.display = 'none';
-        }, 2500);
-      } else {
-        alert("There was a problem. Please try again.");
-      }
-    }).catch(() => {
-      alert("Oops! Submission failed.");
-    });
-  });
-</script>
-<script>
-// Scroll-in animation using Intersection Observer
 document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll('.scrolly-section');
   const observer = new IntersectionObserver(entries => {
@@ -303,58 +230,52 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }, { threshold: 0.1 });
-
   sections.forEach(section => observer.observe(section));
-});
 
-// Popup form open/close logic
-document.addEventListener("DOMContentLoaded", function () {
   const popupContainer = document.getElementById('popup-form-container');
+  const popupBox = document.getElementById('popup-form-box');
   const popupForm = document.getElementById('popup-form');
-  const confirmationScreen = document.getElementById('confirmation-screen');
+  const confirmation = document.getElementById('confirmation-screen');
+  const serviceField = document.getElementById('popup-service');
+  const closeButton = popupBox.querySelector('.close');
 
-  // Open popup and set service
   document.querySelectorAll('.button[data-service]').forEach(button => {
-    button.addEventListener('click', (e) => {
+    button.addEventListener('click', function (e) {
       e.preventDefault();
-      const service = button.getAttribute('data-service');
-      document.getElementById('popup-service').value = service;
+      const selectedService = this.getAttribute('data-service');
+      serviceField.value = selectedService;
       popupContainer.style.display = 'flex';
     });
   });
 
-  // Close popup on close button
-  document.querySelector('#popup-form-box .close').addEventListener('click', () => {
+  closeButton.addEventListener('click', () => {
     popupContainer.style.display = 'none';
     popupForm.style.display = 'block';
-    confirmationScreen.style.display = 'none';
+    confirmation.style.display = 'none';
+    popupForm.reset();
   });
 
-  // Form submission with confirmation screen
   popupForm.addEventListener('submit', function (e) {
     e.preventDefault();
     const formData = new FormData(popupForm);
-
     fetch(popupForm.action, {
       method: 'POST',
       body: formData,
       headers: { 'Accept': 'application/json' }
-    })
-    .then(response => {
+    }).then(response => {
       if (response.ok) {
         popupForm.style.display = 'none';
-        confirmationScreen.style.display = 'block';
+        confirmation.style.display = 'block';
         popupForm.reset();
         setTimeout(() => {
           popupContainer.style.display = 'none';
-          confirmationScreen.style.display = 'none';
+          confirmation.style.display = 'none';
           popupForm.style.display = 'block';
         }, 4000);
       } else {
-        alert("Something went wrong. Please try again.");
+        alert("There was a problem. Please try again.");
       }
-    })
-    .catch(() => {
+    }).catch(() => {
       alert("Oops! Submission failed.");
     });
   });
