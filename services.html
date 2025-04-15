@@ -8,45 +8,100 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   <style>
-    .pricing-table {
-      margin: 2rem 0;
-      padding: 1.5rem;
-      background: #f7f7f7;
-      border-radius: 8px;
+    .contact-topbar {
+      text-align: right;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      color: #999;
     }
-    .pricing-table h3 {
-      margin-bottom: 1rem;
-    }
-    .pricing-table ul {
-      padding-left: 1.5rem;
-      list-style: none;
-    }
-    .pricing-table li {
-      padding: 0.3rem 0;
-    }
-    .button.primary {
-      background-color: #49bf9d;
-      color: #fff;
+    .contact-topbar a {
+      color: #999;
       text-decoration: none;
-      border-radius: 4px;
-      padding: 0.6rem 1.2rem;
-      display: inline-block;
-      margin-top: 1rem;
+      margin-left: 1rem;
     }
-    .button.primary:hover {
-      background-color: #3aa88b;
+    .contact-topbar a:hover {
+      color: #fff;
     }
-    form input, form textarea, form select {
-      margin-bottom: 1rem;
+    .service-table {
+      width: 100%;
+      margin-bottom: 2rem;
+      border-collapse: collapse;
     }
-    .success-message {
-      color: green;
+    .service-table th, .service-table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
+    }
+    .service-table th {
+      background-color: #f0f0f0;
+    }
+    .button.primary.centered {
+      display: block;
+      margin: 1rem auto;
+      width: fit-content;
+    }
+    .scrolly-section {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    .scrolly-section.visible {
+      opacity: 1;
+      transform: none;
+    }
+    #popup-form-container {
       display: none;
-      margin-top: 1rem;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+    #popup-form-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 400px;
+      width: 90%;
+      position: relative;
+      text-align: center;
+    }
+    #popup-form-box .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 20px;
+      cursor: pointer;
+      font-weight: bold;
     }
   </style>
 </head>
 <body class="is-preload">
+
+<!-- Contact Topbar -->
+<div class="contact-topbar">
+  <span><i class="fas fa-phone-alt"></i> (555) 555-5555</span>
+  <a href="mailto:movewellfitness25@gmail.com"><i class="fas fa-envelope"></i> movewellfitness25@gmail.com</a>
+</div>
+
+<!-- Popup Form -->
+<div id="popup-form-container">
+  <div id="popup-form-box">
+    <span class="close" onclick="document.getElementById('popup-form-container').style.display='none'">&times;</span>
+    <h2>Get Started</h2>
+    <form id="popup-form" action="https://formspree.io/f/mnnprzbw" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required style="width: 100%; margin-bottom: 10px;" />
+      <input type="email" name="email" placeholder="Your Email" required style="width: 100%; margin-bottom: 10px;" />
+      <input type="tel" name="phone" placeholder="Your Phone Number (optional)" style="width: 100%; margin-bottom: 10px;" />
+      <input type="text" name="interest" id="popup-interest" readonly style="width: 100%; margin-bottom: 10px; background: #eee;" />
+      <textarea name="message" placeholder="Any notes or questions?" rows="4" style="width: 100%; margin-bottom: 10px;"></textarea>
+      <button type="submit" class="button primary">Submit</button>
+      <p id="form-confirmation" style="color: green; display: none; margin-top: 1rem;">You're all set! A coach will be in touch to get you started.</p>
+    </form>
+  </div>
+</div>
 
 <!-- Wrapper -->
 <div id="wrapper">
@@ -73,80 +128,68 @@
   <!-- Main -->
   <div id="main">
     <section class="post">
-      <header class="major">
+      <header class="major scrolly-section">
         <h1>Our Services</h1>
-        <p>Fitness solutions designed for real life — personalized, flexible, and effective.</p>
+        <p>Explore our packages and coaching options. We bring the coaching to you — virtually or in person.</p>
       </header>
 
-      <!-- 1-on-1 Training -->
-      <div class="pricing-table">
-        <h3><i class="fas fa-user"></i> 1-on-1 Personal Training</h3>
-        <p>We bring the workout to you—your home, park, or building gym. Certified coaches + all equipment provided.</p>
-        <ul>
-          <li>Kickstart (4 sessions): $70/session – $280 total</li>
-          <li>Progress (8 sessions): $65/session – $520 total</li>
-          <li>Build (12 sessions): $60/session – $720 total</li>
-          <li>Transform (24 sessions): $55/session – $1,320 total</li>
-        </ul>
-        <a href="#form" class="button primary">Get Started</a>
+      <!-- 1-on-1 Personal Training -->
+      <div class="scrolly-section">
+        <h2>1-on-1 Personal Training</h2>
+        <table class="service-table">
+          <thead>
+            <tr><th>Package</th><th>Sessions</th><th>Rate</th><th>Total</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Kickstart</td><td>4</td><td>$70</td><td>$280</td></tr>
+            <tr><td>Progress</td><td>8</td><td>$65</td><td>$520</td></tr>
+            <tr><td>Build</td><td>12</td><td>$60</td><td>$720</td></tr>
+            <tr><td>Transform</td><td>24</td><td>$55</td><td>$1,320</td></tr>
+          </tbody>
+        </table>
+        <a class="button primary centered" data-service="1-on-1 Personal Training">Get Started</a>
       </div>
 
       <!-- Partner Training -->
-      <div class="pricing-table">
-        <h3><i class="fas fa-users"></i> Partner Training (2 People)</h3>
-        <p>Train with a friend! Each session is personalized for both of you. Shared motivation. Shared results.</p>
-        <ul>
-          <li>Kickstart: $80/session – $320 total ($160/person)</li>
-          <li>Progress: $75/session – $600 total ($300/person)</li>
-          <li>Build: $70/session – $840 total ($420/person)</li>
-          <li>Transform: $65/session – $1,560 total ($780/person)</li>
-        </ul>
-        <a href="#form" class="button primary">Get Started</a>
+      <div class="scrolly-section">
+        <h2>Partner Training (2 People)</h2>
+        <table class="service-table">
+          <thead>
+            <tr><th>Package</th><th>Sessions</th><th>Rate</th><th>Total</th><th>Per Person</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Kickstart</td><td>4</td><td>$80</td><td>$320</td><td>$160</td></tr>
+            <tr><td>Progress</td><td>8</td><td>$75</td><td>$600</td><td>$300</td></tr>
+            <tr><td>Build</td><td>12</td><td>$70</td><td>$840</td><td>$420</td></tr>
+            <tr><td>Transform</td><td>24</td><td>$65</td><td>$1,560</td><td>$780</td></tr>
+          </tbody>
+        </table>
+        <a class="button primary centered" data-service="Partner Training">Get Started</a>
       </div>
 
       <!-- Online Coaching -->
-      <div class="pricing-table">
-        <h3><i class="fas fa-laptop"></i> Online Coaching</h3>
-        <p>Remote support for real-world results. Weekly workouts, check-ins, and messaging — anytime, anywhere.</p>
-        <ul>
-          <li>$85/month</li>
-          <li>2 Custom Workouts/Week</li>
-          <li>1 Weekly Check-In</li>
-          <li>Ongoing Messaging Support</li>
-        </ul>
-        <p><strong>Special Offers:</strong><br>
-          First month: $49<br>
-          Intro 2-Pack: $100<br>
-          Referral Bonus: $50 off for both you and a friend
-        </p>
-        <a href="#form" class="button primary">Get Started</a>
+      <div class="scrolly-section">
+        <h2>Online Coaching</h2>
+        <table class="service-table">
+          <thead>
+            <tr><th>Plan</th><th>Monthly Price</th><th>Includes</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Standard</td>
+              <td>$85</td>
+              <td>2 Custom Workouts/Week, Weekly Check-In, Messaging Support</td>
+            </tr>
+          </tbody>
+        </table>
+        <p><strong>Special Offers:</strong> First Month $49 · Intro 2-Pack $100 · Referral Bonus: $50 off</p>
+        <a class="button primary centered" data-service="Online Coaching">Get Started</a>
       </div>
-
-      <!-- Lead Capture Form -->
-      <div id="form" class="pricing-table">
-        <h3><i class="fas fa-envelope"></i> Get Started with MoveWell</h3>
-        <form action="https://formspree.io/f/mnnprzbw" method="POST">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="_replyto" placeholder="Your Email" required />
-          <input type="tel" name="phone" placeholder="Your Phone Number (optional)" />
-          <select name="interest">
-            <option value="">I'm interested in...</option>
-            <option value="1-on-1 Training">1-on-1 Training</option>
-            <option value="Partner Training">Partner Training</option>
-            <option value="Online Coaching">Online Coaching</option>
-          </select>
-          <textarea name="message" placeholder="Tell us more..." rows="4"></textarea>
-          <input type="text" name="_gotcha" style="display:none" />
-          <button type="submit" class="button primary">Submit</button>
-          <p id="success-message" class="success-message">You're all set! A coach will be in touch to get you started.</p>
-        </form>
-      </div>
-
     </section>
   </div>
 
   <!-- Footer -->
-  <footer id="footer">
+  <footer id="footer" class="scrolly-section">
     <section class="split contact">
       <section class="alt">
         <h3>Location</h3>
@@ -175,17 +218,58 @@
 <!-- Scripts -->
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
 <script src="assets/js/browser.min.js"></script>
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 <script>
-  document.querySelector("form").addEventListener("submit", function(e) {
-    const msg = document.getElementById("success-message");
-    setTimeout(() => {
-      msg.style.display = "block";
-    }, 500);
+  // Scroll-in animation
+  document.addEventListener("DOMContentLoaded", function () {
+    const sections = document.querySelectorAll('.scrolly-section');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    sections.forEach(section => observer.observe(section));
+  });
+
+  // Get Started button triggers popup
+  document.querySelectorAll('.button[data-service]').forEach(button => {
+    button.addEventListener('click', () => {
+      const interest = button.getAttribute('data-service');
+      document.getElementById('popup-interest').value = interest;
+      document.getElementById('popup-form-container').style.display = 'flex';
+    });
+  });
+
+  // Form submission confirmation
+  document.getElementById('popup-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const form = e.target;
+    const data = new FormData(form);
+    const message = document.getElementById('form-confirmation');
+
+    fetch(form.action, {
+      method: "POST",
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(response => {
+      if (response.ok) {
+        message.style.display = 'block';
+        form.reset();
+        setTimeout(() => {
+          document.getElementById('popup-form-container').style.display = 'none';
+          message.style.display = 'none';
+        }, 2500);
+      } else {
+        alert("There was a problem. Please try again.");
+      }
+    }).catch(() => {
+      alert("Oops! Submission failed.");
+    });
   });
 </script>
 
