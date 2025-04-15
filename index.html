@@ -64,6 +64,12 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.3);
         }
 
+        #formResponse {
+            margin-top: 1em;
+            font-weight: bold;
+            display: none;
+        }
+
         @media screen and (max-width: 736px) {
             .modal-content {
                 width: 90%;
@@ -82,7 +88,7 @@
 </head>
 <body class="is-preload">
 
-<!-- Floating Button -->
+<!-- Floating CTA -->
 <a href="#" id="floatingCta">🎁 Free Session</a>
 
 <!-- Wrapper -->
@@ -172,7 +178,7 @@
     <div class="modal-content">
         <span class="close">&times;</span>
         <h2>Claim Your Complimentary Fitness Session</h2>
-        <form method="POST" action="https://formspree.io/f/mnnprzbw">
+        <form id="popupForm">
             <div class="fields">
                 <div class="field">
                     <label for="name">Name</label>
@@ -188,9 +194,10 @@
                 </div>
             </div>
             <ul class="actions">
-                <li><input type="submit" value="Book My Free Session" class="primary" /></li>
+                <li><button type="submit" class="primary">Book My Free Session</button></li>
             </ul>
         </form>
+        <div id="formResponse" style="color: green;">✅ Thanks! Your complimentary session request was sent.</div>
     </div>
 </div>
 
@@ -203,42 +210,76 @@
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const popup = document.getElementById("getStartedPopup");
-        const closeBtn = document.querySelector("#getStartedPopup .close");
-        const triggers = [
-            document.getElementById("getStartedBtn"),
-            document.getElementById("getStartedBtn2"),
-            document.getElementById("getStartedBtn3"),
-            document.getElementById("floatingCta")
-        ];
+  document.addEventListener("DOMContentLoaded", function () {
+    const popup = document.getElementById("getStartedPopup");
+    const closeBtn = document.querySelector("#getStartedPopup .close");
+    const form = document.getElementById("popupForm");
+    const responseBox = document.getElementById("formResponse");
+    const triggers = [
+      document.getElementById("getStartedBtn"),
+      document.getElementById("getStartedBtn2"),
+      document.getElementById("getStartedBtn3"),
+      document.getElementById("floatingCta")
+    ];
 
-        // Open modal from any trigger
-        triggers.forEach(btn => {
-            if (btn) {
-                btn.addEventListener("click", function (e) {
-                    e.preventDefault();
-                    popup.style.display = "flex";
-                });
-            }
+    // Open popup
+    triggers.forEach(btn => {
+      if (btn) {
+        btn.addEventListener("click", function (e) {
+          e.preventDefault();
+          popup.style.display = "flex";
+          form.style.display = "block";
+          responseBox.style.display = "none";
         });
-
-        // Auto show popup after 5 seconds
-        setTimeout(function () {
-            popup.style.display = "flex";
-        }, 5000);
-
-        // Close modal
-        closeBtn.addEventListener("click", function () {
-            popup.style.display = "none";
-        });
-
-        window.addEventListener("click", function (e) {
-            if (e.target === popup) {
-                popup.style.display = "none";
-            }
-        });
+      }
     });
+
+    // Auto show popup after 5 seconds
+    setTimeout(function () {
+      popup.style.display = "flex";
+    }, 5000);
+
+    // Close popup
+    closeBtn.addEventListener("click", function () {
+      popup.style.display = "none";
+    });
+
+    window.addEventListener("click", function (e) {
+      if (e.target === popup) {
+        popup.style.display = "none";
+      }
+    });
+
+    // AJAX Form Submission
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      fetch("https://formspree.io/f/mnnprzbw", {
+        method: "POST",
+        headers: { 'Accept': 'application/json' },
+        body: formData
+      })
+      .then(response => {
+        if (response.ok) {
+          form.reset();
+          form.style.display = "none";
+          responseBox.style.display = "block";
+          responseBox.style.color = "green";
+        } else {
+          responseBox.style.display = "block";
+          responseBox.style.color = "red";
+          responseBox.textContent = "❌ Something went wrong. Try again.";
+        }
+      })
+      .catch(() => {
+        responseBox.style.display = "block";
+        responseBox.style.color = "red";
+        responseBox.textContent = "❌ Network error. Try again.";
+      });
+    });
+  });
 </script>
 
 </body>
