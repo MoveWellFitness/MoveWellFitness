@@ -4697,13 +4697,15 @@ input, select, textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(33, 41, 49, 0.9); /* optional background */
+  background-color: rgba(33, 41, 49, 0.9); /* optional */
 }
 
 .navPanelToggle::before {
-  content: "\\f0c9"; /* Unicode for Font Awesome bars */
+  content: "\\f0c9"; /* Font Awesome hamburger icon */
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   font-size: 1.5rem;
   color: white;
 }
+
+
