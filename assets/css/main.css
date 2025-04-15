@@ -4687,3 +4687,23 @@ input, select, textarea {
 		}
 
 	}
+.navPanelToggle {
+  position: fixed;
+  top: 0.75rem;
+  right: 0.75rem;
+  width: 4rem;
+  height: 4rem;
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(33, 41, 49, 0.9); /* optional background */
+}
+
+.navPanelToggle::before {
+  content: "\\f0c9"; /* Unicode for Font Awesome bars */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: white;
+}
