@@ -9,6 +9,17 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   <style>
+
+body, html {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+#wrapper {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
     .scrolly-section {
       opacity: 0;
       transform: translateY(20px);
@@ -67,29 +78,7 @@
       font-weight: bold;
     }
   
-    .special-offers {
-      background: #ffeaa7;
-      padding: 1.5rem;
-      border-left: 5px solid #f39c12;
-      margin-bottom: 2rem;
-      border-radius: 5px;
-    }
-    .service-table {
-      width: 100%;
-      margin-bottom: 2rem;
-      border-collapse: collapse;
-    }
-    .service-table th, .service-table td {
-      border: 1px solid #ddd;
-      padding: 12px;
-      text-align: center;
-    }
-    .service-table th {
-      background-color: #f0f0f0;
-    }
-
-  
-    @media screen and (max-width: 480px) {
+    @media screen and (max-width: 600px) {
       #popup-form-box {
         padding: 1rem;
         max-width: 90%;
@@ -100,6 +89,8 @@
       }
       input, select, textarea {
         font-size: 1rem;
+        width: 100%;
+        margin-bottom: 1rem;
       }
     }
 
@@ -218,20 +209,7 @@
         <p><a href="mailto:movewellfitness25@gmail.com">movewellfitness25@gmail.com</a></p>
       </section>
     </section>
-  
-    <section>
-      <h3>Social</h3>
-      <ul class="icons alt">
-        <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-        <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-      </ul>
-    </section>
   </footer>
-  <div id="copyright">
-    <ul><li>&copy; MoveWell</li><li>Design adapted from: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-  </div>
-</div>
-
 </div>
 
 <!-- Popup Form -->
@@ -264,8 +242,10 @@
         <textarea name="message" placeholder="Any other goals or questions?" rows="4" style="width: 100%; padding: 10px;"></textarea>
       </div>
       <button type="submit" class="button primary centered" style="margin-top: 1.5rem;">Submit</button>
-<button type="button" id="exit-popup" class="button primary centered" style="margin-top: 1rem; background-color: #ccc; color: #000;">Exit</button>
     </form>
+
+      <button type="button" id="exit-popup" class="button primary centered" style="margin-top: 1rem; background-color: #ccc; color: #000;">Exit</button>
+
     <div id="confirmation-screen" style="display: none; text-align: center; padding-top: 1rem;">
       <h2>🎉 You're All Set!</h2>
       <p>Thanks for getting started. We'll reach out to you shortly.</p>
@@ -336,15 +316,21 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("Oops! Something went wrong with submission.");
     });
   
-    document.getElementById('exit-popup').addEventListener('click', function () {
-      popupContainer.style.display = 'none';
-      popupForm.reset();
-    });
+    var exitButton = document.getElementById('exit-popup');
+    if (exitButton) {
+      exitButton.addEventListener('click', function () {
+        popupContainer.style.display = 'none';
+        popupForm.style.display = 'block';
+        confirmation.style.display = 'none';
+        popupForm.reset();
+      });
+    }
 
 });
 </script>
 
 </body>
 </html>
+
 
 
