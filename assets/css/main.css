@@ -4687,20 +4687,7 @@ input, select, textarea {
 		}
 
 	}
-/* Custom Sticky Translucent Header */
-#header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 9999;
-  background-color: rgba(255, 255, 255, 0.4); /* semi-transparent glassy look */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 1.5rem 0;
-  text-align: center;
-  transition: all 0.3s ease;
-  box-shadow: none;
-}
+
 
 #header.shrink {
   background-color: rgba(255, 255, 255, 0.97); /* almost solid on scroll */
