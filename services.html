@@ -85,22 +85,22 @@
     </div>
   </div>
 
-  <!-- Lead Capture Form -->
+  <!-- Lead Capture Form (Formspree Integrated) -->
   <section id="form" class="mt-5 pt-5">
     <div class="card p-4 shadow-sm">
       <h2 class="text-center mb-4">Get Started with MoveWell</h2>
-      <form action="mailto:movewellfitness25@gmail.com" method="POST" enctype="text/plain">
+      <form action="https://formspree.io/f/yourFormIDHere" method="POST">
         <div class="mb-3">
           <label for="name" class="form-label">Your Name</label>
-          <input type="text" class="form-control" id="name" name="Name" required />
+          <input type="text" class="form-control" id="name" name="name" required />
         </div>
         <div class="mb-3">
           <label for="email" class="form-label">Your Email</label>
-          <input type="email" class="form-control" id="email" name="Email" required />
+          <input type="email" class="form-control" id="email" name="_replyto" required />
         </div>
         <div class="mb-3">
           <label for="service" class="form-label">Interested In</label>
-          <select class="form-select" id="service" name="Service">
+          <select class="form-select" id="service" name="service">
             <option>1-on-1 Personal Training</option>
             <option>Partner Training</option>
             <option>Online Coaching</option>
@@ -108,8 +108,9 @@
         </div>
         <div class="mb-3">
           <label for="message" class="form-label">Additional Notes</label>
-          <textarea class="form-control" id="message" rows="4" name="Message"></textarea>
+          <textarea class="form-control" id="message" rows="4" name="message"></textarea>
         </div>
+        <input type="text" name="_gotcha" style="display:none" />
         <button type="submit" class="btn btn-success w-100">Submit</button>
       </form>
     </div>
