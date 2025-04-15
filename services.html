@@ -292,6 +292,74 @@
     });
   });
 </script>
+<script>
+// Scroll-in animation using Intersection Observer
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll('.scrolly-section');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  sections.forEach(section => observer.observe(section));
+});
+
+// Popup form open/close logic
+document.addEventListener("DOMContentLoaded", function () {
+  const popupContainer = document.getElementById('popup-form-container');
+  const popupForm = document.getElementById('popup-form');
+  const confirmationScreen = document.getElementById('confirmation-screen');
+
+  // Open popup and set service
+  document.querySelectorAll('.button[data-service]').forEach(button => {
+    button.addEventListener('click', (e) => {
+      e.preventDefault();
+      const service = button.getAttribute('data-service');
+      document.getElementById('popup-service').value = service;
+      popupContainer.style.display = 'flex';
+    });
+  });
+
+  // Close popup on close button
+  document.querySelector('#popup-form-box .close').addEventListener('click', () => {
+    popupContainer.style.display = 'none';
+    popupForm.style.display = 'block';
+    confirmationScreen.style.display = 'none';
+  });
+
+  // Form submission with confirmation screen
+  popupForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const formData = new FormData(popupForm);
+
+    fetch(popupForm.action, {
+      method: 'POST',
+      body: formData,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+      if (response.ok) {
+        popupForm.style.display = 'none';
+        confirmationScreen.style.display = 'block';
+        popupForm.reset();
+        setTimeout(() => {
+          popupContainer.style.display = 'none';
+          confirmationScreen.style.display = 'none';
+          popupForm.style.display = 'block';
+        }, 4000);
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    })
+    .catch(() => {
+      alert("Oops! Submission failed.");
+    });
+  });
+});
+</script>
 
 </body>
 </html>
