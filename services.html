@@ -1,12 +1,10 @@
-
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>Services | MoveWell</title>
+  <title>Services | MoveWell Fitness</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/main.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   <style>
     .scrolly-section {
@@ -22,7 +20,7 @@
       display: inline-flex;
       justify-content: center;
       align-items: center;
-      background-color: #007bff;
+      background-color: #e91e63;
       color: white;
       padding: 0.75rem 1.5rem;
       border-radius: 5px;
@@ -32,11 +30,9 @@
       text-decoration: none;
       margin: 1rem auto;
       transition: background-color 0.3s;
-      height: 48px;
-      line-height: 1;
     }
     .button.primary.centered:hover {
-      background-color: #0056b3;
+      background-color: #c2185b;
     }
     #popup-form-container {
       display: none;
@@ -54,7 +50,7 @@
       padding: 1.5rem;
       border-radius: 10px;
       width: 100%;
-      max-width: 380px;
+      max-width: 400px;
       text-align: center;
       position: relative;
     }
@@ -68,7 +64,7 @@
     }
   </style>
 </head>
-<body>
+<body class="is-preload">
 
 <!-- Wrapper -->
 <div id="wrapper">
@@ -86,10 +82,6 @@
       <li class="active"><a href="services.html">Services</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
-    <ul class="icons">
-      <li><i class="fas fa-phone-alt"></i> (555) 555-5555</li>
-      <li><a href="mailto:movewellfitness25@gmail.com"><i class="fas fa-envelope"></i> movewellfitness25@gmail.com</a></li>
-    </ul>
   </nav>
 
   <!-- Main Content -->
@@ -100,21 +92,20 @@
         <p>Real coaching. Real people. Real progress. On your terms.</p>
       </header>
 
-      
       <!-- Special Offers -->
-      <div class="special-offers scrolly-section">
-        <h2><i class="fas fa-gift"></i> Special Offers</h2>
+      <div class="scrolly-section">
+        <h2>🎉 Special Offers</h2>
         <ul>
-          <li><strong>🎉 First Month Online Coaching: $49</strong></li>
-          <li><strong>💪 Try 2 Personal Training Sessions: $100 intro pack</strong></li>
-          <li><strong>🤝 Referral Bonus: Bring a friend and you each get $50 off</strong></li>
+          <li><strong>First Month Online Coaching: $49</strong></li>
+          <li><strong>2 Personal Training Sessions: $100 intro pack</strong></li>
+          <li><strong>Referral Bonus: Bring a friend, you each get $50 off</strong></li>
         </ul>
       </div>
 
-      <!-- 1-on-1 Training -->
+      <!-- 1-on-1 Personal Training -->
       <div class="scrolly-section">
-        <h2><i class="fas fa-user"></i> 1-on-1 Personal Training</h2>
-        <table class="service-table">
+        <h2>💪 1-on-1 Personal Training</h2>
+        <table>
           <thead><tr><th>Package</th><th>Sessions</th><th>Rate</th><th>Total</th></tr></thead>
           <tbody>
             <tr><td>Kickstart</td><td>4</td><td>$70</td><td>$280</td></tr>
@@ -128,8 +119,8 @@
 
       <!-- Partner Training -->
       <div class="scrolly-section">
-        <h2><i class="fas fa-users"></i> Partner Training (2 People)</h2>
-        <table class="service-table">
+        <h2>👯 Partner Training (2 People)</h2>
+        <table>
           <thead><tr><th>Package</th><th>Sessions</th><th>Rate</th><th>Total</th><th>Per Person</th></tr></thead>
           <tbody>
             <tr><td>Kickstart</td><td>4</td><td>$80</td><td>$320</td><td>$160</td></tr>
@@ -143,8 +134,8 @@
 
       <!-- Online Coaching -->
       <div class="scrolly-section">
-        <h2><i class="fas fa-laptop"></i> Online Coaching</h2>
-        <table class="service-table">
+        <h2>🌐 Online Coaching</h2>
+        <table>
           <thead><tr><th>Plan</th><th>Price</th><th>Includes</th></tr></thead>
           <tbody>
             <tr><td>Standard</td><td>$85/mo</td><td>2 Custom Workouts/Week, Weekly Check-In, Messaging Support</td></tr>
@@ -152,36 +143,23 @@
         </table>
         <a class="button primary centered" data-service="Online Coaching">Get Started</a>
       </div>
-
-      <div class="scrolly-section">
-        <h2><i class="fas fa-user"></i> 1-on-1 Personal Training</h2>
-        <p>Customized training to fit your goals and schedule.</p>
-        <a class="button primary centered" data-service="1-on-1 Personal Training">Get Started</a>
-      </div>
-
-      <div class="scrolly-section">
-        <h2><i class="fas fa-users"></i> Partner Training</h2>
-        <p>Train together with a partner for extra motivation and fun.</p>
-        <a class="button primary centered" data-service="Partner Training">Get Started</a>
-      </div>
-
-      <div class="scrolly-section">
-        <h2><i class="fas fa-laptop"></i> Online Coaching</h2>
-        <p>Flexible, remote coaching to keep you on track from anywhere.</p>
-        <a class="button primary centered" data-service="Online Coaching">Get Started</a>
-      </div>
     </section>
   </div>
 
   <!-- Footer -->
-  <footer id="footer" class="scrolly-section">
+  <footer id="footer">
     <section class="split contact">
       <section>
         <h3>Email</h3>
         <p><a href="mailto:movewellfitness25@gmail.com">movewellfitness25@gmail.com</a></p>
       </section>
+      <section>
+        <h3>Phone</h3>
+        <p><a href="tel:5555555555">(555) 555-5555</a></p>
+      </section>
     </section>
   </footer>
+
 </div>
 
 <!-- Popup Form -->
@@ -189,35 +167,18 @@
   <div id="popup-form-box">
     <span class="close">&times;</span>
     <h2>Get Started</h2>
-    <p style="margin-top: 0.5rem; font-weight: bold;" id="selected-service-label"></p>
+    <p id="selected-service-label" style="font-weight: bold;"></p>
     <form id="popup-form" method="POST" action="https://formspree.io/f/xblgbzrd">
-      <input type="hidden" id="popup-service" name="Service" />
-      <div><input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 10px;" /></div>
-      <div><input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 10px;" /></div>
-      <div><input type="tel" name="phone" placeholder="Your Phone Number" style="width: 100%; padding: 10px;" /></div>
-      <div style="text-align: left; margin-top: 1rem;">
-        <label for="Goals">Primary Goal</label>
-        <select name="goal" id="Goals" style="width: 100%; padding: 10px;">
-          <option value="">-- Select a goal --</option>
-          <option>Lose weight</option>
-          <option>Build muscle</option>
-          <option>Improve endurance</option>
-          <option>Rehab injury</option>
-          <option>General health</option>
-        </select>
-      </div>
-      <div style="text-align: left; margin-top: 1rem;">
-        <label for="StartDate">Preferred Start Date</label>
-        <input type="date" name="start_date" id="StartDate" style="width: 100%; padding: 10px;" />
-      </div>
-      <div style="margin-top: 1rem;">
-        <textarea name="message" placeholder="Any other goals or questions?" rows="4" style="width: 100%; padding: 10px;"></textarea>
-      </div>
-      <button type="submit" class="button primary centered" style="margin-top: 1.5rem;">Submit</button>
+      <input type="hidden" name="Service" id="popup-service" />
+      <input type="text" name="name" placeholder="Your Name" required style="width: 100%; padding: 10px; margin: 5px 0;" />
+      <input type="email" name="email" placeholder="Your Email" required style="width: 100%; padding: 10px; margin: 5px 0;" />
+      <input type="tel" name="phone" placeholder="Your Phone" style="width: 100%; padding: 10px; margin: 5px 0;" />
+      <textarea name="message" placeholder="Your goals or questions..." rows="4" style="width: 100%; padding: 10px; margin-top: 10px;"></textarea>
+      <button type="submit" class="button primary centered" style="margin-top: 1rem;">Submit</button>
     </form>
-    <div id="confirmation-screen" style="display: none; text-align: center; padding-top: 1rem;">
-      <h2>🎉 You're All Set!</h2>
-      <p>Thanks for getting started. We'll reach out to you shortly.</p>
+    <div id="confirmation-screen" style="display: none; padding-top: 1rem;">
+      <h3>🎉 You're All Set!</h3>
+      <p>Thanks for signing up. We'll be in touch shortly!</p>
     </div>
   </div>
 </div>
@@ -225,7 +186,7 @@
 <!-- Script -->
 <script>
 document.addEventListener("DOMContentLoaded", function () {
-  const sections = document.querySelectorAll('.scrolly-section');
+  // Scroll fade in
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -233,57 +194,56 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   }, { threshold: 0.1 });
-  sections.forEach(section => observer.observe(section));
+  document.querySelectorAll('.scrolly-section').forEach(section => observer.observe(section));
 
-  const popupContainer = document.getElementById('popup-form-container');
-  const popupForm = document.getElementById('popup-form');
-  const confirmation = document.getElementById('confirmation-screen');
+  // Popup logic
+  const popup = document.getElementById('popup-form-container');
+  const form = document.getElementById('popup-form');
+  const confirm = document.getElementById('confirmation-screen');
   const serviceField = document.getElementById('popup-service');
   const serviceLabel = document.getElementById('selected-service-label');
   const closeBtn = document.querySelector('#popup-form-box .close');
 
-  document.querySelectorAll('.button[data-service]').forEach(button => {
-    button.addEventListener('click', function (e) {
+  document.querySelectorAll('.button[data-service]').forEach(btn => {
+    btn.addEventListener('click', e => {
       e.preventDefault();
-      const selected = this.getAttribute('data-service');
-      serviceField.value = selected;
-      serviceLabel.textContent = selected;
-      popupContainer.style.display = 'flex';
+      const service = btn.getAttribute('data-service');
+      serviceField.value = service;
+      serviceLabel.textContent = service;
+      form.style.display = "block";
+      confirm.style.display = "none";
+      popup.style.display = "flex";
     });
   });
 
-  closeBtn.addEventListener('click', function () {
-    popupContainer.style.display = 'none';
-    popupForm.style.display = 'block';
-    confirmation.style.display = 'none';
-    popupForm.reset();
+  closeBtn.addEventListener('click', () => {
+    popup.style.display = "none";
+    form.reset();
   });
 
-  popupForm.addEventListener('submit', function (e) {
+  form.addEventListener('submit', function (e) {
     e.preventDefault();
-    const formData = new FormData(popupForm);
-    fetch(popupForm.action, {
+    const formData = new FormData(form);
+    fetch(form.action, {
       method: 'POST',
       body: formData,
       headers: { 'Accept': 'application/json' }
     })
     .then(response => {
       if (response.ok) {
-        popupForm.style.display = 'none';
-        confirmation.style.display = 'block';
-        popupForm.reset();
+        form.style.display = "none";
+        confirm.style.display = "block";
         setTimeout(() => {
-          popupContainer.style.display = 'none';
-          confirmation.style.display = 'none';
-          popupForm.style.display = 'block';
+          popup.style.display = "none";
+          confirm.style.display = "none";
+          form.reset();
+          form.style.display = "block";
         }, 4000);
       } else {
-        alert("There was a problem submitting the form.");
+        alert("❌ Submission failed.");
       }
     })
-    .catch(() => {
-      alert("Oops! Something went wrong with submission.");
-    });
+    .catch(() => alert("⚠️ Network error. Try again."));
   });
 });
 </script>
