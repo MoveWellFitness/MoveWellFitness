@@ -205,19 +205,29 @@
   </div>
 </div>
 
-<!-- Popup Form + Confirmation -->
+<!-- Popup Form -->
 <div id="popup-form-container">
   <div id="popup-form-box">
     <span class="close">&times;</span>
     <h2>Get Started</h2>
     <form id="popup-form" method="POST" action="https://formspree.io/f/xblgbzrd">
       <input type="hidden" id="popup-service" name="Service" />
-      <div><input type="text" name="Name" placeholder="Your Name" required /></div>
-      <div><input type="email" name="Email" placeholder="Your Email" required /></div>
-      <div><input type="tel" name="Phone" placeholder="Your Phone Number" /></div>
+      
       <div>
-        <label for="Goals">Primary Goal</label>
-        <select name="Fitness Goal" id="Goals" required>
+        <input type="text" name="Name" placeholder="Your Name" required />
+      </div>
+
+      <div>
+        <input type="email" name="Email" placeholder="Your Email" required />
+      </div>
+
+      <div>
+        <input type="tel" name="Phone" placeholder="Your Phone Number" />
+      </div>
+
+      <div>
+        <label for="Goals" style="display:block; margin-top:10px;">Primary Goal</label>
+        <select name="Fitness Goal" id="Goals">
           <option value="">-- Select a goal --</option>
           <option>Lose weight</option>
           <option>Build muscle</option>
@@ -226,17 +236,20 @@
           <option>General health</option>
         </select>
       </div>
+
       <div>
-        <label for="StartDate">Preferred Start Date</label>
+        <label for="StartDate" style="display:block; margin-top:10px;">Preferred Start Date</label>
         <input type="date" name="Start Date" id="StartDate" />
       </div>
+
       <div>
-        <label for="Availability">Best Days/Times</label>
-        <textarea name="Availability" id="Availability" placeholder="Ex: M/W/F mornings or weekends only"></textarea>
+        <textarea name="Message" placeholder="Any other goals or questions?" rows="4" style="margin-top:10px;"></textarea>
       </div>
-      <div><textarea name="Message" placeholder="Any other goals or questions?" rows="4"></textarea></div>
-      <button type="submit" class="button primary centered">Submit</button>
+
+      <button type="submit" class="button primary centered" style="margin-top: 1rem;">Submit</button>
     </form>
+
+    <!-- Confirmation screen -->
     <div id="confirmation-screen" style="display: none; text-align: center; padding-top: 1rem;">
       <h2>🎉 You're All Set!</h2>
       <p>Thanks for getting started. We'll reach out to you shortly.</p>
@@ -244,9 +257,44 @@
   </div>
 </div>
 
-<!-- Scripts -->
+<!-- Inline Styles for Popup Layout -->
+<style>
+  #popup-form-container {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 1rem;
+  }
+
+  #popup-form-box {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    position: relative;
+  }
+
+  #popup-form-box .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+</style>
+
+<!-- Popup + Scroll Script -->
 <script>
   document.addEventListener("DOMContentLoaded", function () {
+    // Scroll reveal animation
     const sections = document.querySelectorAll('.scrolly-section');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -257,6 +305,7 @@
     }, { threshold: 0.1 });
     sections.forEach(section => observer.observe(section));
 
+    // Popup form logic
     const popupContainer = document.getElementById('popup-form-container');
     const popupForm = document.getElementById('popup-form');
     const confirmation = document.getElementById('confirmation-screen');
@@ -304,5 +353,7 @@
     });
   });
 </script>
+
+
 </body>
 </html>
