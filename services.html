@@ -38,62 +38,136 @@
       background-color: #f0f8ff;
       transition: background-color 0.2s;
     }
-    #popup-form-container {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.7);
-      justify-content: center;
-      align-items: center;
-      z-index: 999;
-    }
-    #popup-form-box {
-      background: white;
-      padding: 2rem;
-      border-radius: 10px;
-      max-width: 400px;
-      width: 90%;
-      position: relative;
-      text-align: center;
-    }
-    #popup-form-box .close {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      font-size: 20px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    #popup-form-box .contact-info {
-      margin-top: 1rem;
-      font-size: 0.95rem;
-      color: #555;
-    }
   </style>
 </head>
 <body class="is-preload">
+  <div id="wrapper" class="fade-in">
 
-<!-- Popup Form -->
-<div id="popup-form-container">
-  <div id="popup-form-box">
-    <span class="close" onclick="document.getElementById('popup-form-container').style.display='none'">&times;</span>
-    <h2>Let’s Get Started!</h2>
-    <p>Share your info and we’ll reach out to customize your training.</p>
-    <form id="popup-contact-form">
-      <input type="text" name="name" placeholder="Your Name" required style="width: 100%; margin-bottom: 10px; padding: 0.5rem;" />
-      <input type="email" name="email" placeholder="Your Email" required style="width: 100%; margin-bottom: 10px; padding: 0.5rem;" />
-      <input type="tel" name="phone" placeholder="Your Phone Number (optional)" style="width: 100%; margin-bottom: 10px; padding: 0.5rem;" />
-      <textarea name="message" placeholder="Tell us a bit about your goals..." rows="4" style="width: 100%; margin-bottom: 10px; padding: 0.5rem;"></textarea>
-      <button type="submit" class="button">Submit</button>
-      <p id="form-message" style="margin-top: 1rem; color: green; display: none;">You're all set! A coach will be in touch to get you started!</p>
-    </form>
-    <div class="contact-info">
-      Or reach out directly at: <strong>555-555-5555</strong>
+    <!-- Header -->
+    <header id="header">
+      <a href="index.html" class="logo">MoveWell</a>
+    </header>
+
+    <!-- Navigation -->
+    <nav id="nav">
+      <ul class="links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="active"><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <ul class="icons">
+        <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+        <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+        <li><a href="#" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+      </ul>
+    </nav>
+
+    <!-- Main -->
+    <div id="main">
+      <section class="post">
+        <header class="major">
+          <h1>Training Services & Pricing</h1>
+          <p>Choose the training format that fits your goals and lifestyle.</p>
+        </header>
+
+        <h2 class="icon-title"><i class="fas fa-dumbbell"></i> Mobile Personal Training</h2>
+        <p>We bring personalized fitness directly to your home, backyard, garage, or local park. Every session is tailored to your goals using a variety of portable equipment. Includes expert coaching, real-time feedback, and full accountability.</p>
+
+        <h3>1-on-1 Packages</h3>
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th><i class="fas fa-flag-checkered"></i> Package</th><th>Sessions</th><th>Rate</th><th>Total</th><th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Kickstart</td><td>4</td><td>$70</td><td>$280</td><td><a href="contact.html" class="button small">Get Started</a></td></tr>
+            <tr><td>Progress</td><td>8</td><td>$65</td><td>$520</td><td><a href="contact.html" class="button small">Get Started</a></td></tr>
+            <tr><td>Build</td><td>12</td><td>$60</td><td>$720</td><td><a href="contact.html" class="button small">Get Started</a></td></tr>
+            <tr><td>Transform</td><td>24</td><td>$55</td><td>$1,320</td><td><a href="contact.html" class="button small">Get Started</a></td></tr>
+          </tbody>
+        </table>
+
+        <h3>Partner Packages (2 People)</h3>
+        <table class="pricing-table">
+          <thead>
+            <tr>
+              <th><i class="fas fa-user-friends"></i> Package</th><th>Sessions</th><th>Rate</th><th>Per Person</th><th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Kickstart</td><td>4</td><td>$80</td><td>$160</td><td><a href="contact.html" class="button small">Get Started</a></td></tr>
+            <tr><td>Progress</td><td>8</td><td>$75</td><td>$300</td><td><a href="contact.html" class="button small">Get Started</a></td></tr>
+            <tr><td>Build</td><td>12</td><td>$70</td><td>$420</td><td><a href="contact.html" class="button small">Get Started</a></td></tr>
+            <tr><td>Transform</td><td>24</td><td>$65</td><td>$780</td><td><a href="contact.html" class="button small">Get Started</a></td></tr>
+          </tbody>
+        </table>
+
+        <h2 class="icon-title"><i class="fas fa-laptop-code"></i> Online Coaching</h2>
+        <p>Get flexible, goal-oriented training with virtual guidance. Ideal for those who want structured support from anywhere.</p>
+        <table class="pricing-table">
+          <thead>
+            <tr><th><i class="fas fa-globe"></i> Plan</th><th>Price</th><th>Includes</th><th></th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Online Coaching</td>
+              <td>$85/month</td>
+              <td>
+                2 custom workouts/week<br>
+                1 weekly online check-in<br>
+                Ongoing messaging support
+              </td>
+              <td><a href="contact.html" class="button small">Get Started</a></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2 class="icon-title"><i class="fas fa-tags"></i> Special Offers</h2>
+        <ul>
+          <li><strong>🎉 First Month of Online Coaching:</strong> $49 (limited time offer)</li>
+          <li><strong>🧪 Try 2 Personal Training Sessions:</strong> $100 intro pack</li>
+          <li><strong>🤝 Referral Bonus:</strong> Bring a friend and you each get $50 off your next package</li>
+        </ul>
+      </section>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <section class="split contact">
+        <section class="alt">
+          <h3>Location</h3>
+          <p>Mobile & Online Coaching</p>
+        </section>
+        <section>
+          <h3>Email</h3>
+          <p><a href="mailto:movewellfitness25@gmail.com">movewellfitness25@gmail.com</a></p>
+        </section>
+        <section>
+          <h3>Social</h3>
+          <ul class="icons alt">
+            <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+            <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+            <li><a href="#" class="icon brands alt fa-youtube"><span class="label">YouTube</span></a></li>
+          </ul>
+        </section>
+      </section>
+    </footer>
+
+    <div id="copyright">
+      <ul><li>&copy; MoveWell</li><li>Design adapted from: <a href="https://html5up.net">HTML5 UP</a></li></ul>
     </div>
   </div>
-</div>
 
-<!-- ...rest of document remains unchanged... -->
+  <!-- Scripts -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/browser.min.js"></script>
+  <script src="assets/js/breakpoints.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
