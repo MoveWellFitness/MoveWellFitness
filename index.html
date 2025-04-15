@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <!--
-	MoveWell Homepage - Clean Multi-Page Layout with Popup and Form
+	MoveWell Homepage - Clean Multi-Page Layout with AJAX Popup
 -->
 <html>
 <head>
@@ -28,10 +28,11 @@
 		<span class="close" onclick="document.getElementById('popup').style.display='none'">&times;</span>
 		<h2>Free Consultation</h2>
 		<p>Sign up now to get a personalized fitness consultation at no cost!</p>
-		<form method="POST" action="https://formspree.io/f/mnnprzbw">
+		<form id="popup-form">
 			<input type="email" name="email" placeholder="Enter your email" style="width: 100%; padding: 0.5rem; margin-top: 1rem;" required />
 			<br>
 			<button type="submit" style="margin-top: 1rem; padding: 0.5rem 1rem;">Submit</button>
+			<p id="popup-message" style="margin-top: 1rem; color: green; display: none;">Thank you! We'll be in touch soon.</p>
 		</form>
 	</div>
 </div>
@@ -124,8 +125,36 @@
 	setTimeout(() => {
 		document.getElementById('popup').style.display = 'flex';
 	}, 3000);
+
+	document.getElementById('popup-form').addEventListener('submit', function(e) {
+		e.preventDefault();
+
+		const form = e.target;
+		const data = new FormData(form);
+		const message = document.getElementById('popup-message');
+
+		fetch("https://formspree.io/f/mnnprzbw", {
+			method: "POST",
+			body: data,
+			headers: { 'Accept': 'application/json' }
+		})
+		.then(response => {
+			if (response.ok) {
+				message.style.display = 'block';
+				form.reset();
+				setTimeout(() => {
+					document.getElementById('popup').style.display = 'none';
+					message.style.display = 'none';
+				}, 2500);
+			} else {
+				alert("There was a problem. Please try again.");
+			}
+		})
+		.catch(error => {
+			alert("Oops! There was a problem submitting your form.");
+		});
+	});
 </script>
 
 </body>
 </html>
-
