@@ -1,90 +1,89 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>MoveWell Fitness</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-    <style>
-        /* Modal Styles */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 10000;
-            left: 0; top: 0;
-            width: 100%; height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-        }
+  <title>MoveWell Fitness</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10000;
+      left: 0; top: 0;
+      width: 100%; height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
 
-        .modal-content {
-            background-color: #fff;
-            margin: auto;
-            padding: 2rem;
-            border-radius: 8px;
-            width: 90%;
-            max-width: 500px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.3);
-            position: relative;
-            animation: slideIn 0.5s ease;
-        }
+    .modal-content {
+      background-color: #fff;
+      margin: auto;
+      padding: 2rem;
+      border-radius: 8px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
+      position: relative;
+      animation: slideIn 0.5s ease;
+    }
 
-        .modal .close {
-            position: absolute;
-            top: 0.5rem;
-            right: 1rem;
-            font-size: 2rem;
-            cursor: pointer;
-            color: #aaa;
-        }
+    .modal .close {
+      position: absolute;
+      top: 0.5rem;
+      right: 1rem;
+      font-size: 2rem;
+      cursor: pointer;
+      color: #aaa;
+    }
 
-        .modal .close:hover {
-            color: #000;
-        }
+    .modal .close:hover {
+      color: #000;
+    }
 
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateY(-30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-        #floatingCta {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 9999;
-            background: #e91e63;
-            color: white;
-            padding: 12px 20px;
-            font-size: 16px;
-            border-radius: 50px;
-            text-decoration: none;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-        }
+    #floatingCta {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+      background: #e91e63;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
 
-        #formResponse {
-            margin-top: 1em;
-            font-weight: bold;
-            display: none;
-        }
+    #formResponse {
+      margin-top: 1em;
+      font-weight: bold;
+      display: none;
+    }
 
-        @media screen and (max-width: 736px) {
-            .modal-content {
-                width: 90%;
-            }
-            input[type="text"], input[type="email"], textarea {
-                width: 100%;
-                font-size: 16px;
-            }
-            .button {
-                width: 100%;
-                font-size: 18px;
-                padding: 1em;
-            }
-        }
-    </style>
+    @media screen and (max-width: 736px) {
+      .modal-content {
+        width: 90%;
+      }
+      input[type="text"], input[type="email"], textarea {
+        width: 100%;
+        font-size: 16px;
+      }
+      .button {
+        width: 100%;
+        font-size: 18px;
+        padding: 1em;
+      }
+    }
+  </style>
 </head>
 <body class="is-preload">
 
@@ -94,111 +93,109 @@
 <!-- Wrapper -->
 <div id="wrapper" class="fade-in">
 
-    <!-- Intro / Hero -->
-    <div id="intro">
-        <h1>Start Your Fitness Journey<br />With a Complimentary Session</h1>
-        <p>Experience mobile personal training or online coaching — no commitment, just results.</p>
-        <ul class="actions">
-            <li><a href="#" class="button primary large" id="getStartedBtn">Claim Free Session</a></li>
+  <!-- Header with Logo -->
+  <header id="header">
+    <a href="index.html" class="logo">
+      <img src="images/Logo.png" alt="MoveWell Fitness Logo" style="height: 48px; width: auto;" />
+    </a>
+  </header>
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <ul class="links">
+      <li class="active"><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <div id="intro">
+    <img src="images/Logo.png" alt="MoveWell Fitness Logo" style="height: 80px; margin-bottom: 1rem;" />
+    <h1>Start Your Fitness Journey<br />With a Complimentary Session</h1>
+    <p>Experience mobile personal training or online coaching — no commitment, just results.</p>
+    <ul class="actions">
+      <li><a href="#" class="button primary large" id="getStartedBtn">Claim Free Session</a></li>
+    </ul>
+  </div>
+
+  <!-- Main Services Section -->
+  <div id="main">
+    <section class="posts">
+      <article>
+        <header><h2><a href="#">Mobile Personal Training</a></h2></header>
+        <a href="#" class="image fit"><img src="images/mobile-training.jpg" alt="Mobile Training" /></a>
+        <p>We bring personalized fitness to your home, park, or office. All the benefits of a gym without the hassle.<br><strong>Book a complimentary session today!</strong></p>
+        <ul class="actions special"><li><a href="#" class="button" id="getStartedBtn2">Learn More</a></li></ul>
+      </article>
+      <article>
+        <header><h2><a href="#">Online Coaching</a></h2></header>
+        <a href="#" class="image fit"><img src="images/online-coaching.jpg" alt="Online Coaching" /></a>
+        <p>Train on your terms with custom workouts, live check-ins, and 24/7 support – all from your phone.<br><strong>Try your first coaching session free!</strong></p>
+        <ul class="actions special"><li><a href="#" class="button" id="getStartedBtn3">Start Coaching</a></li></ul>
+      </article>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <section class="split contact">
+      <section class="alt">
+        <h3>Location</h3>
+        <p>Available citywide and online</p>
+      </section>
+      <section>
+        <h3>Email</h3>
+        <p><a href="mailto:movewellfitness25@gmail.com">movewellfitness25@gmail.com</a></p>
+      </section>
+      <section>
+        <h3>Phone</h3>
+        <p><a href="tel:5555555555">(555) 555-5555</a></p>
+      </section>
+      <section>
+        <h3>Social</h3>
+        <ul class="icons alt">
+          <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+          <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+          <li><a href="#" class="icon brands alt fa-youtube"><span class="label">YouTube</span></a></li>
         </ul>
-    </div>
+      </section>
+    </section>
+  </footer>
 
-    <!-- Header -->
-    <header id="header">
-        <a href="index.html" class="logo">MoveWell</a>
-    </header>
-
-    <!-- Nav -->
-    <nav id="nav">
-        <ul class="links">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Main -->
-    <div id="main">
-        <section class="posts">
-            <article>
-                <header><h2><a href="#">Mobile Personal Training</a></h2></header>
-                <a href="#" class="image fit"><img src="images/mobile-training.jpg" alt="Mobile Training" /></a>
-                <p>We bring personalized fitness to your home, park, or office. All the benefits of a gym without the hassle.<br><strong>Book a complimentary session today!</strong></p>
-                <ul class="actions special"><li><a href="#" class="button" id="getStartedBtn2">Learn More</a></li></ul>
-            </article>
-            <article>
-                <header><h2><a href="#">Online Coaching</a></h2></header>
-                <a href="#" class="image fit"><img src="images/online-coaching.jpg" alt="Online Coaching" /></a>
-                <p>Train on your terms with custom workouts, live check-ins, and 24/7 support – all from your phone.<br><strong>Try your first coaching session free!</strong></p>
-                <ul class="actions special"><li><a href="#" class="button" id="getStartedBtn3">Start Coaching</a></li></ul>
-            </article>
-        </section>
-    </div>
-
-    <!-- Footer -->
-    <footer id="footer">
-        <section class="split contact">
-            <section class="alt">
-                <h3>Address</h3>
-                <p>456 Fitness Lane<br />Wellness City, ST 12345</p>
-            </section>
-            <section>
-                <h3>Phone</h3>
-                <p><a href="tel:5555555555">(555) 555-5555</a></p>
-            </section>
-            <section>
-                <h3>Email</h3>
-                <p><a href="mailto:movewellfitness25@gmail.com">movewellfitness25@gmail.com</a></p>
-            </section>
-            <section>
-                <h3>Follow Us</h3>
-                <div style="display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1rem;">
-                    <span><strong>📧 Email:</strong> <a href="mailto:movewellfitness25@gmail.com">movewellfitness25@gmail.com</a></span>
-                    <span><strong>📞 Phone:</strong> <a href="tel:5555555555">(555) 555-5555</a></span>
-                </div>
-                <ul class="icons alt">
-                    <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-                    <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-                    <li><a href="#" class="icon brands alt fa-youtube"><span class="label">YouTube</span></a></li>
-                </ul>
-            </section>
-        </section>
-    </footer>
-
-    <!-- Copyright -->
-    <div id="copyright">
-        <ul><li>&copy; MoveWell Fitness</li><li>Design: HTML5 UP Template adapted</li></ul>
-    </div>
-
+  <!-- Copyright -->
+  <div id="copyright">
+    <ul><li>&copy; MoveWell Fitness</li><li>Design: Custom by Caelan & GPT 🔨</li></ul>
+  </div>
 </div>
 
-<!-- Complimentary Session Modal -->
+<!-- Get Started Modal -->
 <div id="getStartedPopup" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2>Claim Your Complimentary Fitness Session</h2>
-        <form id="popupForm">
-            <div class="fields">
-                <div class="field">
-                    <label for="name">Name</label>
-                    <input type="text" name="name" id="popup-name" required />
-                </div>
-                <div class="field">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="popup-email" required />
-                </div>
-                <div class="field">
-                    <label for="goal">What’s your fitness goal?</label>
-                    <textarea name="goal" id="popup-goal" rows="3" required></textarea>
-                </div>
-            </div>
-            <ul class="actions">
-                <li><button type="submit" class="primary">Book My Free Session</button></li>
-            </ul>
-        </form>
-        <div id="formResponse" style="color: green;">✅ Thanks! Your complimentary session request was sent.</div>
-    </div>
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2>Claim Your Complimentary Fitness Session</h2>
+    <form id="popupForm">
+      <div class="fields">
+        <div class="field">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="popup-name" required />
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="popup-email" required />
+        </div>
+        <div class="field">
+          <label for="goal">What’s your fitness goal?</label>
+          <textarea name="goal" id="popup-goal" rows="3" required></textarea>
+        </div>
+      </div>
+      <ul class="actions">
+        <li><button type="submit" class="primary">Book My Free Session</button></li>
+      </ul>
+    </form>
+    <div id="formResponse" style="color: green;">✅ Thanks! Your complimentary session request was sent.</div>
+  </div>
 </div>
 
 <!-- Scripts -->
@@ -222,7 +219,6 @@
       document.getElementById("floatingCta")
     ];
 
-    // Open popup
     triggers.forEach(btn => {
       if (btn) {
         btn.addEventListener("click", function (e) {
@@ -234,12 +230,10 @@
       }
     });
 
-    // Auto show popup after 5 seconds
     setTimeout(function () {
       popup.style.display = "flex";
     }, 5000);
 
-    // Close popup
     closeBtn.addEventListener("click", function () {
       popup.style.display = "none";
     });
@@ -250,12 +244,9 @@
       }
     });
 
-    // AJAX Form Submission
-    form.addEventListener("submit", function (e) {
+    form.addEventListener('submit', function (e) {
       e.preventDefault();
-
       const formData = new FormData(form);
-
       fetch("https://formspree.io/f/mnnprzbw", {
         method: "POST",
         headers: { 'Accept': 'application/json' },
