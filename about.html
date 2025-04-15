@@ -20,9 +20,46 @@
       font-family: "Source Sans Pro", sans-serif;
     }
 
+    /* Sticky Nav */
+    #nav {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+      background-color: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      padding: 1rem 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    }
+
+    .links {
+      text-align: center;
+      padding-left: 0;
+    }
+
+    .links li {
+      display: inline-block;
+      margin: 0 1rem;
+    }
+
+    .links a {
+      color: var(--color-primary);
+      font-weight: 600;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .links .active a {
+      color: var(--color-primary-dark);
+    }
+
+    .links a:hover {
+      color: var(--color-primary-dark);
+    }
+
     .hero-logo {
       text-align: center;
-      margin-top: 60px;
+      margin-top: 80px;
     }
 
     .hero-logo img {
@@ -65,15 +102,6 @@
       background: white;
     }
 
-    .links li a {
-      color: var(--color-primary);
-      font-weight: bold;
-    }
-
-    .links li a:hover {
-      color: var(--color-primary-dark);
-    }
-
     footer h3 {
       color: var(--color-primary-dark);
     }
@@ -86,16 +114,17 @@
       .hero-logo img {
         height: 120px;
       }
+
+      .links li {
+        display: block;
+        margin: 0.5rem 0;
+      }
     }
   </style>
 </head>
 <body class="is-preload">
 
-<!-- Header + Navigation Bar (same as index.html) -->
-<header id="header">
-  <a href="index.html" class="logo">MoveWell Fitness</a>
-</header>
-
+<!-- Navigation Bar -->
 <nav id="nav">
   <ul class="links">
     <li><a href="index.html">Home</a></li>
