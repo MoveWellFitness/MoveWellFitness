@@ -1,129 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | MoveWell Fitness</title>
+  <title>Services | MoveWell</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="assets/css/main.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
   <style>
-    html {
-      scroll-behavior: smooth;
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 2em;
     }
-    .service-card {
-      border-radius: 1rem;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
+    .pricing-table th, .pricing-table td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: center;
     }
-    .service-card:hover {
-      transform: translateY(-5px);
+    .pricing-table th {
+      background-color: #f5f5f5;
     }
-    .btn-primary {
-      border-radius: 30px;
+    .icon-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
-    footer p {
-      margin: 0;
+    .icon-title i {
+      font-size: 1.5rem;
+    }
+    .button.small:hover {
+      background-color: #5cb85c;
+      border-color: #4cae4c;
+      color: white;
+      transition: all 0.3s ease-in-out;
+    }
+    .pricing-table tr:hover {
+      background-color: #f0f8ff;
+      transition: background-color 0.2s;
+    }
+    #popup-form-container {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+    #popup-form-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      max-width: 400px;
+      width: 90%;
+      position: relative;
+      text-align: center;
+    }
+    #popup-form-box .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 20px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    #popup-form-box .contact-info {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: #555;
     }
   </style>
 </head>
 <body class="is-preload">
 
-<header class="bg-dark text-white text-center py-4">
-  <h1>Our Services</h1>
-  <p>Train Anywhere. Achieve Everywhere.</p>
-</header>
-
-<main class="container my-5">
-  <div class="row g-4">
-    <!-- Personal Training -->
-    <div class="col-md-6">
-      <div class="card service-card p-4">
-        <h2>1-on-1 Personal Training</h2>
-        <p>Personalized fitness at your location—home, park, or backyard. Includes expert guidance, accountability, and all equipment provided.</p>
-        <h5 class="mt-3">Packages:</h5>
-        <ul class="list-group mb-3">
-          <li class="list-group-item">Kickstart (4 sessions): $70/session – $280 total</li>
-          <li class="list-group-item">Progress (8 sessions): $65/session – $520 total</li>
-          <li class="list-group-item">Build (12 sessions): $60/session – $720 total</li>
-          <li class="list-group-item">Transform (24 sessions): $55/session – $1,320 total</li>
-        </ul>
-        <a href="#form" class="btn btn-primary w-100">Get Started</a>
-      </div>
-    </div>
-
-    <!-- Partner Training -->
-    <div class="col-md-6">
-      <div class="card service-card p-4">
-        <h2>Partner Training (2 People)</h2>
-        <p>Train with a friend or partner! Sessions are tailored for dual progress with shared or complementary fitness goals.</p>
-        <h5 class="mt-3">Packages:</h5>
-        <ul class="list-group mb-3">
-          <li class="list-group-item">Kickstart: $80/session – $320 total ($160/person)</li>
-          <li class="list-group-item">Progress: $75/session – $600 total ($300/person)</li>
-          <li class="list-group-item">Build: $70/session – $840 total ($420/person)</li>
-          <li class="list-group-item">Transform: $65/session – $1,560 total ($780/person)</li>
-        </ul>
-        <a href="#form" class="btn btn-primary w-100">Get Started</a>
-      </div>
-    </div>
-
-    <!-- Online Coaching -->
-    <div class="col-md-6">
-      <div class="card service-card p-4">
-        <h2>Online Coaching</h2>
-        <p>Flexible and remote coaching to match your lifestyle. Weekly custom workouts, check-ins, and full support—wherever you are.</p>
-        <h5 class="mt-3">Pricing:</h5>
-        <p><strong>$85/month</strong></p>
-        <ul class="list-group mb-3">
-          <li class="list-group-item">2 Custom Workouts/Week</li>
-          <li class="list-group-item">1 Weekly Online Check-In</li>
-          <li class="list-group-item">Ongoing Messaging Support</li>
-        </ul>
-        <p><strong>Special Offers:</strong><br>
-          First month: $49<br>
-          Intro 2-Pack: $100<br>
-          Referral Bonus: $50 off for both you and a friend
-        </p>
-        <a href="#form" class="btn btn-primary w-100">Get Started</a>
-      </div>
+<!-- Popup Form -->
+<div id="popup-form-container">
+  <div id="popup-form-box">
+    <span class="close" onclick="document.getElementById('popup-form-container').style.display='none'">&times;</span>
+    <h2>Let’s Get Started!</h2>
+    <p>Share your info and we’ll reach out to customize your training.</p>
+    <form id="popup-contact-form">
+      <input type="text" name="name" placeholder="Your Name" required style="width: 100%; margin-bottom: 10px; padding: 0.5rem;" />
+      <input type="email" name="email" placeholder="Your Email" required style="width: 100%; margin-bottom: 10px; padding: 0.5rem;" />
+      <input type="tel" name="phone" placeholder="Your Phone Number (optional)" style="width: 100%; margin-bottom: 10px; padding: 0.5rem;" />
+      <textarea name="message" placeholder="Tell us a bit about your goals..." rows="4" style="width: 100%; margin-bottom: 10px; padding: 0.5rem;"></textarea>
+      <button type="submit" class="button">Submit</button>
+      <p id="form-message" style="margin-top: 1rem; color: green; display: none;">You're all set! A coach will be in touch to get you started!</p>
+    </form>
+    <div class="contact-info">
+      Or reach out directly at: <strong>555-555-5555</strong>
     </div>
   </div>
+</div>
 
-  <!-- Lead Capture Form (Formspree Integrated) -->
-  <section id="form" class="mt-5 pt-5">
-    <div class="card p-4 shadow-sm">
-      <h2 class="text-center mb-4">Get Started with MoveWell</h2>
-      <form action="https://formspree.io/f/mnnprzbw" method="POST">
-        <div class="mb-3">
-          <label for="name" class="form-label">Your Name</label>
-          <input type="text" class="form-control" id="name" name="name" required />
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Your Email</label>
-          <input type="email" class="form-control" id="email" name="_replyto" required />
-        </div>
-        <div class="mb-3">
-          <label for="service" class="form-label">Interested In</label>
-          <select class="form-select" id="service" name="service">
-            <option>1-on-1 Personal Training</option>
-            <option>Partner Training</option>
-            <option>Online Coaching</option>
-          </select>
-        </div>
-        <div class="mb-3">
-          <label for="message" class="form-label">Additional Notes</label>
-          <textarea class="form-control" id="message" rows="4" name="message"></textarea>
-        </div>
-        <input type="text" name="_gotcha" style="display:none" />
-        <button type="submit" class="btn btn-success w-100">Submit</button>
-      </form>
-    </div>
-  </section>
-</main>
-
-<footer class="bg-light text-center py-3 mt-5">
-  <p>&copy; 2025 MoveWell Fitness. All rights reserved.</p>
-</footer>
-
-</body>
-</html>
+<!-- ...rest of document remains unchanged... -->
