@@ -88,6 +88,21 @@
       background-color: #f0f0f0;
     }
 
+  
+    @media screen and (max-width: 480px) {
+      #popup-form-box {
+        padding: 1rem;
+        max-width: 90%;
+      }
+      .button.primary.centered {
+        width: 100%;
+        font-size: 1rem;
+      }
+      input, select, textarea {
+        font-size: 1rem;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -249,6 +264,7 @@
         <textarea name="message" placeholder="Any other goals or questions?" rows="4" style="width: 100%; padding: 10px;"></textarea>
       </div>
       <button type="submit" class="button primary centered" style="margin-top: 1.5rem;">Submit</button>
+<button type="button" id="exit-popup" class="button primary centered" style="margin-top: 1rem; background-color: #ccc; color: #000;">Exit</button>
     </form>
     <div id="confirmation-screen" style="display: none; text-align: center; padding-top: 1rem;">
       <h2>🎉 You're All Set!</h2>
@@ -319,7 +335,12 @@ document.addEventListener("DOMContentLoaded", function () {
     .catch(() => {
       alert("Oops! Something went wrong with submission.");
     });
-  });
+  
+    document.getElementById('exit-popup').addEventListener('click', function () {
+      popupContainer.style.display = 'none';
+      popupForm.reset();
+    });
+
 });
 </script>
 
