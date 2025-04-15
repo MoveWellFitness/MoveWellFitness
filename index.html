@@ -1,191 +1,93 @@
+<!-- Popup Form -->
+<div id="popup-form-container">
+  <div id="popup-form-box">
+    <span class="close">&times;</span>
+    <h2>Get Started</h2>
+    <form id="popup-form" method="POST" action="https://formspree.io/f/xblgbzrd">
+      <input type="hidden" id="popup-service" name="Service" />
+      
+      <div>
+        <input type="text" name="Name" placeholder="Your Name" required />
+      </div>
 
-<!DOCTYPE HTML>
-<html>
-<head>
-  <title>MoveWell | Personal Training Reinvented</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="assets/css/main.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-  <style>
-    #popup .close {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      font-size: 20px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    .scrolly-section {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-    }
-    .scrolly-section.visible {
-      opacity: 1;
-      transform: none;
-    }
-  </style>
-</head>
-<body class="is-preload">
-<a href="#navPanel" class="navPanelToggle"></a>
+      <div>
+        <input type="email" name="Email" placeholder="Your Email" required />
+      </div>
 
-<!-- Sign Up Popup -->
-<div id="popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); justify-content: center; align-items: center; z-index: 999;">
-  <div style="background: white; padding: 2rem; border-radius: 10px; max-width: 400px; width: 90%; position: relative; text-align: center;">
-    <span class="close" onclick="document.getElementById('popup').style.display='none'">&times;</span>
-    <h2>Free Consultation</h2>
-    <p>Sign up now to get a personalized fitness consultation at no cost!</p>
-    <form id="popup-form">
-      <input type="email" name="email" placeholder="Enter your email" style="width: 100%; padding: 0.5rem; margin-top: 1rem;" required />
-      <br>
-      <button type="submit" style="margin-top: 1rem; padding: 0.5rem 1rem;">Submit</button>
-      <p id="popup-message" style="margin-top: 1rem; color: green; display: none;">You're all set! A coach will be in touch to get you started.</p>
+      <div>
+        <input type="tel" name="Phone" placeholder="Your Phone Number" />
+      </div>
+
+      <div>
+        <label for="Goals" style="display:block; margin-top:10px;">Primary Goal</label>
+        <select name="Fitness Goal" id="Goals">
+          <option value="">-- Select a goal --</option>
+          <option>Lose weight</option>
+          <option>Build muscle</option>
+          <option>Improve endurance</option>
+          <option>Rehab injury</option>
+          <option>General health</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="StartDate" style="display:block; margin-top:10px;">Preferred Start Date</label>
+        <input type="date" name="Start Date" id="StartDate" />
+      </div>
+
+      <div>
+        <textarea name="Message" placeholder="Any other goals or questions?" rows="4" style="margin-top:10px;"></textarea>
+      </div>
+
+      <button type="submit" class="button primary centered" style="margin-top: 1rem;">Submit</button>
     </form>
+
+    <!-- Confirmation screen -->
+    <div id="confirmation-screen" style="display: none; text-align: center; padding-top: 1rem;">
+      <h2>🎉 You're All Set!</h2>
+      <p>Thanks for getting started. We'll reach out to you shortly.</p>
+    </div>
   </div>
 </div>
 
-<!-- Wrapper -->
-<div id="wrapper" class="fade-in">
-  <a href="#navPanel" class="navPanelToggle"></a>
+<!-- Inline Styles for Popup Layout -->
+<style>
+  #popup-form-container {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 1rem;
+  }
 
-  <!-- Mobile Nav Toggle -->
-  
+  #popup-form-box {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    position: relative;
+  }
 
-  <!-- Intro -->
-  <div id="intro" class="scrolly-section">
-    <h1>Welcome to<br />MoveWell Fitness</h1>
-    <p>Mobile Personal Training & Online Fitness Coaching</p>
-    <ul class="actions">
-      <li><a href="services.html" class="button icon solid fa-dumbbell">Explore Services</a></li>
-    </ul>
-  </div>
+  #popup-form-box .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+</style>
 
-  <!-- Header -->
-  <header id="header">
-    <a href="index.html" class="logo">MoveWell</a>
-  </header>
-
-  <!-- Nav -->
-  <nav id="nav">
-    <ul class="links">
-      <li class="active"><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <ul class="icons">
-      <li style="margin-right: 1rem; font-size: 0.9rem; color: #bbb;">
-        <i class="fas fa-phone-alt"></i> (555) 555-5555
-      </li>
-      <li style="margin-right: 1rem; font-size: 0.9rem;">
-        <a href="mailto:movewellfitness25@gmail.com" style="color: #bbb;">
-          <i class="fas fa-envelope"></i> movewellfitness25@gmail.com
-        </a>
-      </li>
-      <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-      <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-    </ul>
-  </nav>
-
-  <!-- Main -->
-  <div id="main">
-    <article class="post featured scrolly-section">
-      <header class="major">
-        <span class="date">April 2025</span>
-        <h2><a href="#">Personal Training<br />That Moves With You</a></h2>
-        <p>Whether you're working out at home, in the park, or on the go—MoveWell brings expert coaching and fitness to your lifestyle.</p>
-      </header>
-      <a href="#" class="image main"><img src="images/movewell-feature.jpg" alt="MoveWell Training" /></a>
-      <ul class="actions special">
-        <li><a href="contact.html" class="button large">Start Your Journey</a></li>
-      </ul>
-    </article>
-  </div>
-
-  <!-- Footer -->
-  <footer id="footer" class="scrolly-section">
-    <section class="split contact">
-      <section class="alt">
-        <h3>Location</h3>
-        <p>Training across your city and online</p>
-      </section>
-      <section>
-        <h3>Email</h3>
-        <p><a href="mailto:movewellfitness25@gmail.com">movewellfitness25@gmail.com</a></p>
-      </section>
-      <section>
-        <h3>Social</h3>
-        <ul class="icons alt">
-          <li><a href="#" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-          <li><a href="#" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-        </ul>
-      </section>
-    </section>
-  </footer>
-
-  <div id="copyright">
-    <ul><li>&copy; MoveWell</li><li>Design adapted from: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-  </div>
-</div>
-
-<!-- Mobile Nav Panel -->
-<div id="navPanel">
-  <nav>
-    <ul class="links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <ul class="icons">
-      <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-      <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-    </ul>
-  </nav>
-</div>
-
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+<!-- Popup + Scroll Script -->
 <script>
-  setTimeout(() => {
-    document.getElementById('popup').style.display = 'flex';
-  }, 3000);
-
-  document.getElementById('popup-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const form = e.target;
-    const data = new FormData(form);
-    const message = document.getElementById('popup-message');
-    fetch("https://formspree.io/f/mnnprzbw", {
-      method: "POST",
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    })
-    .then(response => {
-      if (response.ok) {
-        message.style.display = 'block';
-        form.reset();
-        setTimeout(() => {
-          document.getElementById('popup').style.display = 'none';
-          message.style.display = 'none';
-        }, 2500);
-      } else {
-        alert("There was a problem. Please try again.");
-      }
-    })
-    .catch(error => {
-      alert("Oops! There was a problem submitting your form.");
-    });
-  });
-
   document.addEventListener("DOMContentLoaded", function () {
+    // Scroll reveal animation
     const sections = document.querySelectorAll('.scrolly-section');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -195,26 +97,52 @@
       });
     }, { threshold: 0.1 });
     sections.forEach(section => observer.observe(section));
+
+    // Popup form logic
+    const popupContainer = document.getElementById('popup-form-container');
+    const popupForm = document.getElementById('popup-form');
+    const confirmation = document.getElementById('confirmation-screen');
+    const serviceField = document.getElementById('popup-service');
+    const closeBtn = document.querySelector('#popup-form-box .close');
+
+    document.querySelectorAll('.button[data-service]').forEach(button => {
+      button.addEventListener('click', function (e) {
+        e.preventDefault();
+        serviceField.value = this.getAttribute('data-service');
+        popupContainer.style.display = 'flex';
+      });
+    });
+
+    closeBtn.addEventListener('click', function () {
+      popupContainer.style.display = 'none';
+      popupForm.style.display = 'block';
+      confirmation.style.display = 'none';
+      popupForm.reset();
+    });
+
+    popupForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const formData = new FormData(popupForm);
+      fetch(popupForm.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        if (response.ok) {
+          popupForm.style.display = 'none';
+          confirmation.style.display = 'block';
+          popupForm.reset();
+          setTimeout(() => {
+            popupContainer.style.display = 'none';
+            confirmation.style.display = 'none';
+            popupForm.style.display = 'block';
+          }, 4000);
+        } else {
+          alert("There was a problem. Please try again.");
+        }
+      }).catch(() => {
+        alert("Oops! Submission failed.");
+      });
+    });
   });
 </script>
-
-<script src="assets/js/main.js"></script>
-
-<!-- Mobile Nav Panel -->
-<div id="navPanel">
-  <nav>
-    <ul class="links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-    <ul class="icons">
-      <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-      <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-    </ul>
-  </nav>
-</div>
-
-</body>
-</html>
